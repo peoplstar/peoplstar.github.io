@@ -108,11 +108,11 @@ Clone을 하게 되면 해당 배포자의 Git log까지 모두 가져오게 되
 
 그리고 터미널으로 해당 디렉토리로 이동하시고, 아래와 같이 하시면 됩니다.
 
->`gem install jekyll-theme-yat` <br> 
+`gem install jekyll-theme-yat` <br> 
 `bundle install` <br>
 `bundle exec jekyll serve`
 
-> `git add .` 로 Staged에 올리고<br>
+`git add .` 로 Staged에 올리고<br>
 `git commit -m "Commit Message"` , 로 Local Repository에 올리고<br>
 `git push` 를 통해 Remote Repository 즉, Github에 올리시면 됩니다.
 
