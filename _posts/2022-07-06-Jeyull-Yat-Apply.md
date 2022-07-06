@@ -101,7 +101,7 @@ Clone을 하게 되면 해당 배포자의 Git log까지 모두 가져오게 되
 다음 `_data` 폴더 밑 `defaults.yml` 파일을 보겠습니다!
 
 <p align="center">
-<img src =https://user-images.githubusercontent.com/78135526/177489390-c20ed11b-0547-4099-bfd2-414927860fdb.png width = 500>
+<img src ="https://user-images.githubusercontent.com/78135526/177489390-c20ed11b-0547-4099-bfd2-414927860fdb.png" width = 500>
 </p>
 
 위 내용은 config.yml에서 default로 설정 된 내용을 여기서 변경하면 바로 적용 됩니다!! 이것 또한 마음대로 변경하시면 됩니다!!!
