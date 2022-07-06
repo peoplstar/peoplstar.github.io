@@ -36,7 +36,7 @@ GitBlog의 테마는 jekyll 테마를 사용하고, 이를 수정 및 관리를 
 
 ## Git Repository 생성 
 
-**1. 새로운 Repository를 만든다.**
+### **1. 새로운 Repository를 만든다.**
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/78135526/177480801-e2e4184c-dfed-48f6-9528-630b9aaa316e.png"/ width = 400>
@@ -44,7 +44,7 @@ GitBlog의 테마는 jekyll 테마를 사용하고, 이를 수정 및 관리를 
 
 New 버튼을 통해서 만드시면 됩니다.
 
-**2. Reopsitory 이름을 명시한다.**
+### **2. Reopsitory 이름을 명시한다.**
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/78135526/177481201-f3d42660-3119-4d8e-b9be-1613b093aa7a.png"/>
@@ -56,7 +56,7 @@ New 버튼 누르고 나면 위와 같이 나올텐데 **Owner는 절대 건들�
 
 그리고 해당 Github는 모두가 볼 수 있도록 해야 GitBlog도 제대로 작동 하기에 **Public**으로 설정 하고, **Add a README FILE**을 체크하고 Create하시면 되겠습니다!
 
-**3. 만들어진 Repository를 Clone 해옵니다.**
+### **3. 만들어진 Repository를 Clone 해옵니다.**
 
 이제 Local 상에서 작업하기 위한 폴더를 만들어 주시고 CMD나 Git Bash에서 해당 디렉토리로 이동하신 다음 자신의 Repository를 Clone 해주시고 직접 가보시면 생성된 Repository가 있을 겁니다!!
 
@@ -76,7 +76,7 @@ Jekyll 테마는 찾아보면 진짜 엄청 많습니다...
 
 저는 [Jekyll Yat](https://github.com/jeffreytse/jekyll-theme-yat)테마를 선택 했습니다!
 
-**1. 테마 설치**
+### **1. 테마 설치**
 
 해당 테마의 GitHub에 들어가셔서 아래와 처럼 **Download Zip**으로 설치 하시면 됩니다.
 
@@ -86,7 +86,7 @@ Jekyll 테마는 찾아보면 진짜 엄청 많습니다...
 
 Clone을 하게 되면 해당 배포자의 Git log까지 모두 가져오게 되고 우리는 만들어진 Repository가 상대의 Git으로 덮여지기에 Download Zip으로 진행합니다!
 
-**2. 테마 적용**
+### **2. 테마 적용**
 
 다운받은 파일을 압축 해제하고, 자신의 Repository에 모두 덮어 씌우시면 됩니다!
 
