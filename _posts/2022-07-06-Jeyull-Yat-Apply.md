@@ -28,16 +28,18 @@ GitBlog의 테마는 jekyll 테마를 사용하고, 이를 수정 및 관리를 
 
 저는 그냥 최신 버전으로 받았습니다!!
 
-이후 CMD 창에서 `ruby -v` 하시면 아래 처럼 나오시면 설치 완료입니다.
+이후 터미널 창에서 `ruby -v` 하시면 아래 처럼 나오시면 설치 완료입니다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/78135526/177484836-078e15f6-c0f4-4dd9-803c-881f3ace54cc.png"/ width = 250></p>
+<img src="https://user-images.githubusercontent.com/78135526/177484836-078e15f6-c0f4-4dd9-803c-881f3ace54cc.png" width = 250>
+</p>
 
 ## Git Repository 생성 
 
 **1. 새로운 Repository를 만든다.**
 
-<p align="center"><img src="https://user-images.githubusercontent.com/78135526/177480801-e2e4184c-dfed-48f6-9528-630b9aaa316e.png"/>
+<p align="center">
+<img src="https://user-images.githubusercontent.com/78135526/177480801-e2e4184c-dfed-48f6-9528-630b9aaa316e.png"/ width = 400>
 </p>
 
 New 버튼을 통해서 만드시면 됩니다.
@@ -46,6 +48,7 @@ New 버튼을 통해서 만드시면 됩니다.
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/78135526/177481201-f3d42660-3119-4d8e-b9be-1613b093aa7a.png"/>
+</p>
 
 New 버튼 누르고 나면 위와 같이 나올텐데 **Owner는 절대 건들지 마시고,** Repository name에 **"username.github.io"** 작성 하시면 됩니다!
 
@@ -103,7 +106,11 @@ Clone을 하게 되면 해당 배포자의 Git log까지 모두 가져오게 되
 
 위 내용은 config.yml에서 default로 설정 된 내용을 여기서 변경하면 바로 적용 됩니다!! 이것 또한 마음대로 변경하시면 됩니다!!!
 
-그리고 CMD로 해당 디렉토리로 이동하시고, 아래와 같이 하시면 됩니다.
+그리고 터미널으로 해당 디렉토리로 이동하시고, 아래와 같이 하시면 됩니다.
+
+>`gem install jekyll-theme-yat` <br> 
+`bundle install` <br>
+`bundle exec jekyll serve`
 
 > `git add .` 로 Staged에 올리고<br>
 `git commit -m "Commit Message"` , 로 Local Repository에 올리고<br>
