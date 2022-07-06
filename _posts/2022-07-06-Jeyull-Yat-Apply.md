@@ -2,8 +2,8 @@
 layout: post
 title: GitBlog 만들기
 subtitle: Jekyll Yat 테마 적용
-categories: Git Blog
-tags: [Git Blog, Jekyll, Yat]
+categories: Git_Blog
+tags: [Git_Blog, Jekyll, Yat]
 ---
 
 안녕하세요 :).
