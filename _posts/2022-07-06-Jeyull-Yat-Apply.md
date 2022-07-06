@@ -39,7 +39,7 @@ GitBlog의 테마는 jekyll 테마를 사용하고, 이를 수정 및 관리를 
 ### **1. 새로운 Repository를 만든다.**
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/78135526/177480801-e2e4184c-dfed-48f6-9528-630b9aaa316e.png"/ width = 400>
+<img src="https://user-images.githubusercontent.com/78135526/177480801-e2e4184c-dfed-48f6-9528-630b9aaa316e.png" width = 400>
 </p>
 
 New 버튼을 통해서 만드시면 됩니다.
