@@ -90,8 +90,6 @@ SELECT * FROM TABLE1 WHERE ID = '1' AND 1 = 2 -- 거짓
 
 ### 4. Time-Based SQL Injection
 
-#### 기본 문법
-
 Time-Based를 Blind에서 소개 시켜 드리는 이유는 아래 코드를 보면 알 수 있다.
 
 ```SQL
