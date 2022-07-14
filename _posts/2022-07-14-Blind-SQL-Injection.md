@@ -1,0 +1,103 @@
+---
+layout: post
+title: Blind SQL Injection
+subtitle: Blind SQL Injection
+categories: SQL
+tags: [SQL, Injection, Pentest]
+---
+
+**본 내용 및 실습 환경은 KISEC, 케이쉴드 주니어 교육 과정에 있음을 알려드립니다.**
+
+## 정의
+
+Blind SQL Injection은 DB의 에러 페이지가 노출 되지 않거나, 취약점 존재를 판단하기 어려운 경우에 주로 사용한다고 봐도 무방하다.
+
+정보를 직접적으로 알 수는 없더라도 참 / 거짓 쿼리의 대상의 반응을 통해 정보를 알아내는 공격이다.
+
+기본적으로 `'(싱글 쿼테이션)`, 또는 `"(더블 쿼테이션)`, `And` 연산을 이용해 참과 거짓의 값을 판별하는 SQL Query를 진행시킨다.
+
+## 실습
+
+### 1. 기본 문법
+
+```SQL
+SELECT * FROM TABLE1 WHERE ID = '1' AND 1 = 1 -- 참
+SELECT * FROM TABLE1 WHERE ID = '1' AND 1 = 2 -- 거짓
+```
+
+`' AND 1 = 1 --` 이나 `' AND 1 = 2 --`로 참과 거짓일 때의 반응을 비교하는 것이다.
+
+### 2. Blind 실습 기초
+
+위 기본 문법으로 어떠한 결과가 나오는지 확인해본다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179008958-4481f76c-d77d-4302-94b7-b12f8644cc30.png" width = 400>
+</p>
+
+* 이는 Quick Search란에 `' AND 1 = 1 --`를 입력했을 때 나온 결과이다.
+
+* `WHERE` 조건에서 특별한 이름 조건이 없으니 참에 대한 모든 내역을 출력하지만, `AND` 연산이 참이기에 결과가 나온 것이다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179010039-e7b8de31-3d89-4e5c-8b39-68128b0b76fd.png" width = 400>
+</p>
+
+* 이번에는 `' AND 1 = 2--`를 입력했을 때 나온 결과이다.
+
+* `WHERE`은 `'AND 1 = 1 --`처럼 항상 참이지만, 뒤 `AND` 연산의 결과가 거짓이므로 전체 쿼리는 거짓이다. 그렇기에 아무 것도 나오지 않는다.
+
+### 3. Blind 실습 응용
+
+우리는 Error-Based SQL Injection 할 때
+
+```SQL
+' AND DB_NAME() > 1 --
+```
+
+위 명령으로 DB의 이름을 알아냈다.
+
+에러 메세지가 노출되지 않는다 가정하고 DB의 이름을 한 글자씩 Brute Force 할 것 이다.
+
+**주소 찾기**를 활용해서 실습 해볼 것이다.
+
+```SQL
+청춘동' AND 1 = 1 --
+청춘동' AND 1 = 2 --
+```
+
+`WHERE`에서 `AND` 기준으로 한 쪽은 항상 참이어야 이후 AND 구문에서 참과 거짓을 변형하면서 참/거짓 값을 판별할 수 있다.
+
+참인지 거짓인지를 판별하므로 첫 글자가 'a'인지, 'b'인지, 나아가 'z'인지를 확인한다.
+
+```SQL
+청천동' AND 'o' = substring(DB_NAME(), 1, 1) --
+청천동' AND 111 = ascii(substring(DB_NAME(), 1, 1)) --
+
+-- 아스키코드 111 : 알파벳 'o' 
+```
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179015243-dc1273ce-df9a-4964-a34a-f171326c3faf.png" width = 350>
+</p>
+
+* `청천동' AND 112...`라 했으면 아래와 같이 더보기가 나오지 않았을 것이다.
+
+* **즉, DB의 이름의 첫 글자는 'o' 라는 것을 알 수 있다.**
+
+> ASCII를 이용하는 이유는 사람이 일일이 Brute Force하는건 인력 낭비이다.<br>
+  그렇기에 스크립트를 작성할 때 ASCII로 1씩 증가 시키면 효율적이기 때문이다.
+
+### 4. Time-Based SQL Injection
+
+#### 기본 문법
+
+Time-Based를 Blind에서 소개 시켜 드리는 이유는 아래 코드를 보면 알 수 있다.
+
+```SQL
+'; if 1 = 1 waitfor delay '0:0:3' --
+```
+
+* **;로 한 줄 띄우고, `if`문으로 참이면 딜레이를 걸어라**
+
+* 즉, 참이면 자체 딜레이를 걸고, 거짓이면 딜레이 없이 바로 진행하게 된다.
