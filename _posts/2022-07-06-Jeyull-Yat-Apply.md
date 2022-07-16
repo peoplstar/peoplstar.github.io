@@ -22,7 +22,12 @@ GitBlog의 테마는 jekyll 테마를 사용하고, 이를 수정 및 관리를 
 
 아래 링크를 통해 루비를 다운 받고 설치 하시면 됩니다.
 
-<a href = "https://www.ruby-lang.org/ko/downloads/com"> 루비 설치 홈페이지로 바로 가고 싶다면?</a>
+<a href = "https://rubyinstaller.org/downloads/"> 루비 설치 홈페이지로 바로 가고 싶다면?</a>
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/78135526/179343341-a9180e87-7134-4c3b-a7e4-2bafb21076c2.png" width = 250>
+</p>
+
 
 설치 하실 때 Default로 되어 있는 대로 하시면 됩니다:)
 
