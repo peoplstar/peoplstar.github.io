@@ -61,6 +61,16 @@ New 버튼 누르고 나면 위와 같이 나올텐데 **Owner는 절대 건들�
 
 그리고 해당 Github는 모두가 볼 수 있도록 해야 GitBlog도 제대로 작동 하기에 **Public**으로 설정 하고, **Add a README FILE**을 체크하고 Create하시면 되겠습니다!
 
+### **3. My Repository Clone**
+
+우리는 계속된 개발 환경을 위해서 우리가 만든 Repository를 Clone 해올 것이다. 경로는 자신이 주로 사용하는 경로에 Clone 하면 된다. **Git Bash, CMD** 어떤거로 해도 상관 없다.
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/78135526/179344466-7e433104-e989-4d6e-b03a-d750e70b55a6.png"/>
+</p>
+
+* 자신의 Repositoy에서 Clone의 URL을 복사해서 위 명령어로 하면 된다.
+
 ## 테마 설치 및 적용
 
 Jekyll 테마는 찾아보면 진짜 엄청 많습니다...
