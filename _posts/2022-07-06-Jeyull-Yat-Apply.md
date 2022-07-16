@@ -61,23 +61,19 @@ New 버튼 누르고 나면 위와 같이 나올텐데 **Owner는 절대 건들�
 
 그리고 해당 Github는 모두가 볼 수 있도록 해야 GitBlog도 제대로 작동 하기에 **Public**으로 설정 하고, **Add a README FILE**을 체크하고 Create하시면 되겠습니다!
 
-### **3. 만들어진 Repository를 Clone 해옵니다.**
-
-이제 Local 상에서 작업하기 위한 폴더를 만들어 주시고 CMD나 Git Bash에서 해당 디렉토리로 이동하신 다음 자신의 Repository를 Clone 해주시고 직접 가보시면 생성된 Repository가 있을 겁니다!!
-
 ## 테마 설치 및 적용
 
 Jekyll 테마는 찾아보면 진짜 엄청 많습니다...
 
 진짜 뭘 골라야 할지도 모를 수준으로 많습니다 예쁘다고 생각하시는거 아무거나 고르시면 됩니다 :)
 
-[jamstackthemes.dev](jamstackthemes.dev)
+[jamstackthemes.dev](https://jamstackthemes.dev)
 
-[jekyllthemes.org](jekyllthemes.org)
+[jekyllthemes.org](https://jekyllthemes.org)
 
-[jekyllthemes.io](jekyllthemes.io)
+[jekyllthemes.io](https://jekyllthemes.io)
 
-[jekyll-themes.com](jekyll-themes.com)
+[jekyll-themes.com](https://jekyll-themes.com)
 
 저는 [Jekyll Yat](https://github.com/jeffreytse/jekyll-theme-yat)테마를 선택 했습니다!
 
