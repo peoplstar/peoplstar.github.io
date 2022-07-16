@@ -69,7 +69,7 @@ Jekyll 테마는 찾아보면 진짜 엄청 많습니다...
 
 [jamstackthemes.dev](https://jamstackthemes.dev)
 
-[jekyllthemes.org](https://jekyllthemes.org)
+[jekyllthemes.org](http://jekyllthemes.org)
 
 [jekyllthemes.io](https://jekyllthemes.io)
 
