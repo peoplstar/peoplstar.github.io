@@ -97,7 +97,18 @@ Jekyll 테마는 찾아보면 진짜 엄청 많습니다...
 
 Clone을 하게 되면 해당 배포자의 Git log까지 모두 가져오게 되고 우리는 만들어진 Repository가 상대의 Git으로 덮여지기에 Download Zip으로 진행합니다!
 
-### **2. 테마 적용**
+### **2. 기본 세팅**
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/179347494-650537d3-d5fd-47db-93d9-da5ba206e524.png" width = 200>
+</p>
+
+윈도우 검색에서 "Start Command Prompt with Ruby"를 실행하고, 아래 명령어를 순차적으로 입력한다.
+`gem install jekyll bundler` <br> 
+`bundle install` <br>
+`chcp 65501` <br>
+
+### **3. 테마 적용**
 
 다운받은 파일을 압축 해제하고, 자신의 Repository에 모두 덮어 씌우시면 됩니다!
 
@@ -119,9 +130,9 @@ Clone을 하게 되면 해당 배포자의 Git log까지 모두 가져오게 되
 
 그리고 터미널으로 해당 디렉토리로 이동하시고, 아래와 같이 하시면 됩니다.
 
-`gem install jekyll-theme-yat` <br> 
-`bundle install` <br>
+`bundle add webrick` <br>
 `bundle exec jekyll serve`
+* 하면 로컬에서 즉, http://127.0.0.1:4000으로 확인 가능하다.
 
 `git add .` 로 Staged에 올리고<br>
 `git commit -m "Commit Message"` , 로 Local Repository에 올리고<br>
@@ -140,3 +151,6 @@ Clone을 하게 되면 해당 배포자의 Git log까지 모두 가져오게 되
 이 폴더 내에 있는거 삭제 하지 마시고, 안에 내용 보시면서 적용하시면 편하실거에요!! 
 
 여러분들은 저처럼 여러번 삭제하고 그런일은 없도록 하시구 화이팅입니다. :>
+
+### **안되시는 분들을 위하여**
+
