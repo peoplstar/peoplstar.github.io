@@ -95,13 +95,13 @@ upx -d flag
 
 #### **After**
 
-1. `[rbp-8]`에 rax가 가진 값을 넣는다.
+_First_. `[rbp-8]`에 rax가 가진 값을 넣는다.
 
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/180636064-95fb1b27-5b06-466c-9be2-4882b633bdaf.png" width = 240>
 </p>
 
-2. `rdx`에 `[rip+0x2c0ee5]`값을 넣는다.
+_Second_. `rdx`에 `[rip+0x2c0ee5]`값을 넣는다.
 
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/180636127-eb84e4b3-0d73-4feb-bbe5-d11a6ab5060f.png" width = 460>
@@ -109,7 +109,7 @@ upx -d flag
 
 > ?... rdx에 FLAG 같은 값을 넣었다? 일단 이것이 FLAG 값이라고 점 찍어두어야 할 것 같다.
 
-3. `rsi`에 `rdx`값을 넣고, `rdi`에 `rax`값을 넣는다.
+_Third_. `rsi`에 `rdx`값을 넣고, `rdi`에 `rax`값을 넣는다.
 
 > 그렇다면 rsi에는 위 FLAG 같은 값이 들어가고 rdi에는 1번의 값이 들어 갈 것이다. 이후 CALL까지 진행하면 RAX에도 FLAG 값이 들어가는 것으로 보니 **0x400320**가 strcpy()이다.
 
