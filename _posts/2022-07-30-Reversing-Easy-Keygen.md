@@ -114,4 +114,4 @@ for i in range(int((len(serial))/2)):
         j = 0
 ```
 
-* 해당 파일의 링크는 제 ![Github]()링크에 있습니다!
+* 해당 파일의 링크는 제 [Github](https://github.com/peoplstar/peoplstar.github.io/blob/main/assets/python/Easy_Keygen.py)링크에 있습니다!
