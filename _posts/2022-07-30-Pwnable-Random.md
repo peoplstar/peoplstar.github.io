@@ -53,7 +53,7 @@ int main(){
 
 * Main 함수의 어셈블리
 
-```ARM Assembly
+```armasm
 0x00000000004005f4 <+0>:     push   rbp
 0x00000000004005f5 <+1>:     mov    rbp,rsp
 0x00000000004005f8 <+4>:     sub    rsp,0x10
@@ -85,7 +85,7 @@ int main(){
 * 16진수 0x00000457은 10진수로 **1111**, 그 다음 **0x6b8b4567**은 Random 값인데 몇 번을 다시 시작해도 같은 값이 나온다. (<u>그 이유는 마지막에 따로 설명하겠습니다!</u>)
 
 
-```ARM Assembly
+```armasm
 0x000000000040062c <+56>:    xor    eax,DWORD PTR [rbp-0x4]
 0x000000000040062f <+59>:    cmp    eax,0xdeadbeef
 0x0000000000400634 <+64>:    jne    0x400656 <main+98>

@@ -102,7 +102,7 @@ scanf("%d", passcode2);
 * **&**가 없다는 것은 passcode1의 주소 '0xcafebabe' 자체가 변경 되게 된다. **그래서 passcode1과 passcode2에 원하는 주소 값을 넣을 수 있게 된다.**
 
 **Welcome disassemble**
-```ARM Assembly
+```armasm
 0x08048609 <+0>:     push   ebp
 0x0804860a <+1>:     mov    ebp,esp
 0x0804860c <+3>:     sub    esp,0x88
@@ -133,7 +133,7 @@ scanf("%d", passcode2);
 * `<welcome+3>`에서 총 136byte의 버퍼를 생성하고, `<welcome+38>`에서 112byte의 크기를 지정하고 scanf 하는 것으로 보니 name[100]의 버퍼는 총 112byte로 할당해준 것으로 예상된다.
 
 **Welcome login**
-```ARM Assembly
+```armasm
 0x08048564 <+0>:     push   ebp
 0x08048565 <+1>:     mov    ebp,esp
 0x08048567 <+3>:     sub    esp,0x28
@@ -196,7 +196,7 @@ r <<< `python -c 'print("A"*96+"B"*4)'`
 
 * 위를 응용해 `scanf("%d", passcode1);`에서 passcode1를 **fflush의 GOT 주소**를 **system("/bin/cat flag)**의 시작주소로 변경하면 해결!
 
-```ARM Assembly
+```armasm
 (gdb) disassemble login
     0x08048593 <+47>:    call   0x8048430 <fflush@plt>
 (gdb) x/3i 0x8048430
@@ -207,7 +207,7 @@ r <<< `python -c 'print("A"*96+"B"*4)'`
 
 > `0x804a004`가 fflush의 GOT 주소
 
-```ARM Assembly
+```armasm
 (gdb) disassemble login
    0x080485e3 <+127>:   mov    DWORD PTR [esp],0x80487af
    0x080485ea <+134>:   call   0x8048460 <system@plt>
