@@ -2,7 +2,7 @@
 layout: post
 title: File Upload
 subtitle: File Upload & Download
-categories: Web
+categories: Web Vulnerability
 tags: [Web, File, WebShell, Pentest]
 ---
 
