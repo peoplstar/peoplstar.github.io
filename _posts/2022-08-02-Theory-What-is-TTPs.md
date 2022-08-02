@@ -28,6 +28,8 @@ TTPs는 전술(Tactics), 기술(Techniques), 절차(Procedures)의 약어로 정
 
 Matrix For Enterprise(22/05/02 기준)으로 전략(Tactics) 14개, 전술(Techniques) 222개가 존재한다.
 
+
+
 ### TTPs 화제
 
 TTPs 전략 전술은 약 3년전부터 주목받기 시작했고, 우리나라 또한 현 시점에서 크게 관심사로 두고 있다. 그렇다면 왜 주목을 받게 되었는가?
@@ -41,38 +43,6 @@ IoC(Indicator of compromise, 악성 IP나 악성 도메인 등 단순지표) 기
 **각각에 있는 공격에 대한 전술과 전략을 확인하자 주 목적, 모든 공격을 하기 위한 전략은 거의 변하질 않는다.**
 
 DB를 탈취하기 위해서 이전에 해야 할 접근 및 침투에 대한 공격이 있다. 내부망을 침투하기 위한 **전략 Initial Access**중에서 **전술 Exploit Public-Facing Application(외부에 알려진 어플리케이션을 통한 침투)**를 사용한다.
-
-### MITRE ATT&CK TTPs 예시
-
-[MITRE](https://attack.mitre.org/matrices/enterprise/#)에 전략과 전술에 대한 개념과 관계가 시각화 되어 있다.
-
-정보 수집은 **Reconnaissance**란으로, 향후 공격을 계획하는데 사용할 수 있는 정보를 수집하기 위한 정찰 활동이다. 해당 전략에는 Active Scanning이 있다. 그렇다면 반대 개념인 Passive Scanning도 있을텐데 이것은 다른 항목에 함께 있다. 두 개의 차이점을 보자.
-
-#### Active & Passive
-
-두 스캐닝에 대한 가장 큰 차이점이라면 **상대 피해자 시스템에서 로그가 남는가 남지 않는가**가 가장 큰 차이다.
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/182383656-f0fdf178-2ea9-4976-890f-a6a4ffe60148.png" width = 550>
-</p>
-
-* Active
-  * 예시
-    * `whatweb –v [URL]`
-    * 해당 도메인이 무엇을 사용하고 있는지 스캔한다. `-v` 옵션은 자세한 출력으로 해당 플러그인에 대한 설명이 포함합니다.
-    * ex) PHP, Apache, WordPress 등 버전까지 기술
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/182391792-c88a9f0e-cf7b-4ef2-9b1a-2e99172c3189.png" width = 450>
-</p>
-
-* Passive
-  * 예시
-    * `fierce –dns [URL]`
-      * DNS 서버를 통해 질의하기 때문에 직접적으로 로그를 남기지 않는 특징이 있다.
-      * 해당 도메인이 어떠한 DNS를 사용하고 있는지에 대한 정보를 출력한다.
-  * Passive Scanning이 없는 이유
-    * [MITRE](https://attack.mitre.org/matrices/enterprise/#)에서 **Reconnaissance** 안에 **Gather Victim Network Information** 항목에서 Sub-techniques을 보면 **[T1590.002 - DNS]**가 있다.
 
 ### TTPs 관점
 
