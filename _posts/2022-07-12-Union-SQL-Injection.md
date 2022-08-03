@@ -59,6 +59,13 @@ SELECT * FROM TABLE1 WHERE ADDRESS = '' OR UNION SELECT 1 --
 <img src ="https://user-images.githubusercontent.com/78135526/178671191-95fb7f3b-db73-41e3-84e6-dafa97c0717e.png" width = 350>
 </p>
 
+```SQL
+UNION SELECT COUNT(TABLE_NAME) FROM INFORMATION.SCHEMA
+WHERE TABLE_SCHEMA = DATABASE()`
+```
+
+* **해당 명령어를 통해 현재 위취한 데이터베이스의 테이블의 개수를 검색할 수 있다.**
+
 ### 3. Union으로 테이블 명 확인
 
 데이터베이스에서 제공하는 **information.schema**를 통해 테이블 명을 확인한다.
