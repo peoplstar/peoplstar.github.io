@@ -4,6 +4,9 @@
 _site
 Gemfile.lock
 
+# Web Shell로 인한 Window Defender
+_posts/2022-07-17-File-Upload.md
+
 _site/
 .sass-cache/
 .jekyll-cache/
