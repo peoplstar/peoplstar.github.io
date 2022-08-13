@@ -42,16 +42,20 @@ tags: [Pentest, TTPs]
 
 ## 파일 다운로드
 
-파일 다운로드에 대해서는 **Web_Vulnerability** 카테고리에서 Old version of KISEC으로 실습했으니 해당[링크](https://peoplstar.github.io/web_vulnerability/2022/08/09/File-Download.html)를 통해서 보는게 좋을 것 같습니다.
+파일 다운로드에 대해서는 **Web_Vulnerability** 카테고리에서 Old version of KISEC으로 실습했으니 해당 [링크](https://peoplstar.github.io/web_vulnerability/2022/08/09/File-Download.html)를 통해서 보는게 좋을 것 같습니다.
 
 (동일한 내용과 환경이기에 보기에 불편함은 없으실 것으로 예상됩니다.)
 
 ## 크로스사이트 스크립팅
 
 점검 문자열로는 `<script>alert("documnet.cookie");</script>`와 `<iframe src = "url"></iframe>`를 점검 할 것이다.
-
+<p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/183585841-133020e6-cfc5-4e04-9566-ea87ae3f091d.jpg" width = 320 alien = 'left'>
+</p>
+
+<p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/183585974-8b8cfaa5-ba72-48dd-82df-e90bd1deb96d.jpg" width = 320 alien = 'right'>
+</p>
 
 * 취약점 현황
   * 발견 URL
@@ -86,3 +90,16 @@ tags: [Pentest, TTPs]
   * `nmap --script ssl-enum-chipers <진단 URL> -p443 unpriviledged`
   * SSL/TLS가 어떤 버전을 사용하고 있는지 이것으로 진단 할 수 있다.
   * 진단을 통해 취약점을 이용한 Exploit이 가능하다.
+
+## 불충분한 인가
+
+관리자 권한으로 공지사항의 게시글을 등록, 수정, 삭제 할 수 있도록 구현하였으나 이 때 파라미터의 권한에 해당하는 값만 의존해서 권한을 결정하도록 구현하였을 때 취약점이 발생할 수 있다. 
+
+**즉, 접근 권한에 대한 인증 프로세스 및 올바른 접근 통제 로직이 구현되지 않아 다른 사용자의 민감한 정보나 인가되지 않은 페이지에 접근할 수 있는 것을 의미한다.**
+
+
+## 프로세스 검증 누락
+
+## 불충분한 세션 만료
+
+## 디렉토리 인덱싱

@@ -15,7 +15,7 @@ headers = {
     'Connection': 'close'
 }
 cookies = {
-        'time': '3', 'PHPSESSID':'k2mog0qd4qhvdi8n1ftmmvrnk2' # Time 임의 값
+        'time': '3', 'PHPSESSID':'YOUR PHPSESSID' # Time 임의 값
 }
 url = "https://webhacking.kr/challenge/web-02/"
 i = 0
