@@ -33,7 +33,7 @@ tags: [Pentest, TTPs]
   * 취약한 부분을 제외하고도 해당 웹 서버는 무엇을 쓰고 있는지 확인할 수 있다.
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/183581676-90bac597-8378-48af-ad52-96e6fac6e7e0.jpg" width = 320>
+<img src ="https://user-images.githubusercontent.com/78135526/184569715-407dff17-d2c0-428a-ae56-652edaf8d9aa.jpg" width = 320>
 </p>
 
 * `nmap 10.200.43.12 -O -sS -T3`
