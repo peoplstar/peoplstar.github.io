@@ -142,7 +142,8 @@ print("    document.write('<tr align=center><td colspan=2><input type=submit></t
 print("}")
 ```
 
-이렇게 난독화를 해제하고 하나씩 뜯어보겠습니다.
+이렇게 Python을 이용해서 변수 지정으로 난독화를 해제하고 하나씩 뜯어보겠습니다.
+
 ```javascript
 if (eval(document.cookie).indexOf(oldzombie) == -1)
 {
