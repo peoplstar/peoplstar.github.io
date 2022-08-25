@@ -114,19 +114,19 @@ select lv from chall7 where lv=(999)union(select(5%3))
 ## 예외에 대한 예시
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/186613692-658aa487-853a-44e8-94ec-d80b16255293.jpg" width = 560>
+<img src ="https://user-images.githubusercontent.com/78135526/186613692-658aa487-853a-44e8-94ec-d80b16255293.jpg">
 </p>
 
 이러한 테이블이 존재한다고 했을 때 우리의 문제 $rand가 1일 경우를 해보겠습니다.
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/186613980-de245028-bf4a-4080-81f4-f2b14eaa1f17.jpg" width = 560>
+<img src ="https://user-images.githubusercontent.com/78135526/186613980-de245028-bf4a-4080-81f4-f2b14eaa1f17.jpg">
 </p>
 
 이렇게 괄호가 하나가 있을 때는 ID 가 **999** 구문에 **UNION**에 대한 값이 나오는 반면 $rand가 2일 경우에는
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/186614375-78c23ab9-5f8c-46d4-8d70-36c79e2e0cea.jpg" width = 560>
+<img src ="https://user-images.githubusercontent.com/78135526/186614375-78c23ab9-5f8c-46d4-8d70-36c79e2e0cea.jpg">
 </p>
 
 이렇게 쿼리 에러가 발생한다. 자세히 보면 기존 **WHERE**에 대한 구문 안에 UNION이 들어가면서 쿼리가 비정상적이기 때문이다. ([실습 링크](http://sqlfiddle.com/))
