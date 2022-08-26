@@ -103,7 +103,7 @@ void func(int key){
 
   * 입력 값 **ebp-0x2c**부터 **ebp+0x8**까지를 변경해야하는 것이다.
 
-  * 해당 위치의 차이는 52byte이다($0$ x $2c$ + $0$ x $8$ = $52$)
+  * 해당 위치의 차이는 52byte이다**(0x2c + 0x8 = 52)**
 
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/179690970-7df1f2ae-db0d-4a92-97bf-34b2ac8e498b.png">
