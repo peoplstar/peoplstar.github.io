@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwnable | pwnable.kr 4번 FLAG
+title: Pwnable | [pwnable.kr] FLAG
 subtitle: Flag 문제 풀이
 categories: Pwnable
 tags: [Pwnable, malloc, pwnable.kr, Pentest]

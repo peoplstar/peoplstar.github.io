@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwnable | pwnable.kr 1번 FD
+title: Pwnable | [pwnable.kr] FD
 subtitle: FD 문제 풀이
 categories: Pwnable
 tags: [Pwnable, pwnable.kr, Pentest]

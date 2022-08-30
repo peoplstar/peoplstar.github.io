@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwnable | pwnable.kr 2번 Collision
+title: Pwnable | [pwnable.kr] Collision
 subtitle: Collision 문제 풀이
 categories: Pwnable
 tags: [Pwnable, pwnable.kr, Pentest]
