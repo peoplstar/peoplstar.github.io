@@ -152,8 +152,7 @@ payload += p64(read_plt)              # read("/bin/sh") 호출
 
 * read@got를 호출 시 해당 인자를 참조하는 곳이 **read@got+0x8**이다. 따라서, read(`"/bin/sh"`)를 하기 위해 인자가 하나이므로, pop rdi 가젯을 이용하고 해당 인자를 참조할 수 있게 **read@got+0x8**를 넣고 read 호출한다.
 
-4. **GOT Overwrite**를 진행한다.
-
+### 4. **GOT Overwrite**
 
 ```python
 # read(0, read@got, 0) => read@got -> system
