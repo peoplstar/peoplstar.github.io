@@ -2,7 +2,7 @@
 layout: post
 title: Theory | ROP
 subtitle: Return Oriented Programming
-categories: Pwnable
+categories: Thoery
 tags: [Pwnable, dreakhack, Pentest]
 ---
 
