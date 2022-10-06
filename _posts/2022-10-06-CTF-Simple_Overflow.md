@@ -169,3 +169,57 @@ p.interactive()
 ```
 
 main의 값을 send하여 다시 main을 진행하게 됐습니다. `system`의 인자 또한 하나기에 **pop_rdi** 가젯을 사용했고, 이제 구해놓은 `/bin/sh\x00` 주소와, `system` 주소를 가젯을 활용하여 진행하면 됩니다.
+
+## libc 버전
+
+해당 문제 파일에서는 libc의 버전을 제공하지 않았기에 Exploit하는데에 문제가 있다. 위 코드로 Exploit이 가능했던 이유는 로컬 환경이기에 가능한 것이다.
+
+이제 서버의 환경에서는 어떠한 libc를 사용하는지 알 수가 없기에 알아내는 방법이 필요하다.
+
+보통 libc에는 항상 **ASLR**이 걸려있습니다.
+
+원리로는 바이너리 파일을 실행시켰을때, 거기에 링커되어있는 libc파일은 base주소를 정해둡니다.
+
+마지막 1.5바이트는 000으로 맞추고 그 나머지는 랜덤값으로 맞추어 줍니다. 
+
+그때, 바이너리 내부에서 printf를 호출할때 plt를 이용해도 되지만, base+상대주소를 호출해도 상관 없습니다.
+
+만약, printf의 상대주소는 **0x12345**이고 libc_base주소가 **0x999000**이라면,
+
+그때, 바이너리 내부에서 `printf`함수 자체를 호출할때 **0x999000 + 0x12345** 인 **0x9ab345** 를 호출할 수 있습니다.
+
+위에서 마지막 하위 1.5바이트를 보면 345로 되어있는것을 확인할 수 있습니다.
+
+즉, 아무리 ASLR이 걸려있다하더라도 하위 1.5바이트는 변하지 않는다는 것이다.
+
+libc-database는 이러한 원리를 이용하여 하위 1.5바이트와 일치하는 libc소스를 찾아주는 역할을 해준다.
+
+[libc](https://libc.rip/) 해당 링크를 통해 알 수 있습니다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/194229777-65d91074-30ff-4ded-8a8e-8a9770f55b8d.jpg" width = 450>
+</p>
+
+```python
+system = lb + libc.symbols['system']
+read = lb + libc.symbols['read']
+
+slog('system', system)
+slog('read', read)
+# 아래의 값 출력
+
+[+] system: 0x7f4033591420
+[+] read: 0x7f4033652020
+```
+
+이렇게 나온 값을 하위 1.5바이트의 값을 넣고 FIND를 하게 된다면 아래처럼 해당 libc의 버전이 나오게 된다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/194230833-69406950-1f40-4619-961f-89ae8d35e289.jpg" width = 450>
+</p>
+
+```python
+libc = ELF([libc version])
+```
+
+Exploit 코드에서 해당 부분을 변경하고 다시 서버쪽으로 진행하게 된다면 성공적으로 Exploit이 가능합니다.
