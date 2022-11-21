@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Theory | ROP
+title: Pwnable | ROP
 subtitle: Return Oriented Programming
-categories: Theory
+categories: Pwnable
 tags: [Pwnable, dreakhack, Pentest]
 ---
 

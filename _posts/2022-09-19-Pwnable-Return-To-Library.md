@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Theory | RTL
+title: Pwnable | RTL
 subtitle: Return to Library
-categories: Theory
+categories: Pwnable
 tags: [Theory, Pentest, Pwnable]
 ---
 
