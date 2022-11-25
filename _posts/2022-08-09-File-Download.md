@@ -2,7 +2,7 @@
 layout: post
 title: File Download
 subtitle: File Upload & Download
-categories: Web_Vulnerability
+categories: Vulnerability
 tags: [Web, File, Pentest]
 ---
 
