@@ -54,7 +54,7 @@ nmap 포트스캐닝으로 대상 시스템의 SSH 포트가 open인지를 확�
 
 SSH brute force attack이 성공적으로 되었는지를 확인하기 위해 대상자에 SSH.txt 파일을 만듭니다. _(이 과정을 생략해도 되겠습니다.)_
 
-### `iptables`
+### iptables
 
 22번 PORT를 열기 위해서는 LINUX에서 제공하는 `iptables`를 이용해 공격자에게 해당 포트를 허용합니다.
 
