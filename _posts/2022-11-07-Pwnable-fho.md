@@ -32,7 +32,7 @@ tags: [Pwnable, dreakhack, Shell, Pentest]
 
 하지만, C언어의 동적 할당과 해제를 담당하는 `malloc, free, realloc`는 libc.so에 구현되어 있다.
 
-각 함수들은 실행전에 `__malloc_hook, __free_hook, __realloc_hook`이라는 훅 변수를 이용한다. 이 함수들 또한 libc.so에 정의되어 있지만, 쓰기 권한을 가진 **bss** 섹션에 존재하지에 값을 조작할 수 있다.
+각 함수들은 실행전에 `__malloc_hook, __free_hook, __realloc_hook`이라는 훅 변수를 이용한다. 이 함수들 또한 libc.so에 정의되어 있지만, 쓰기 권한을 가진 **bss** 섹션에 존재하기에 값을 조작할 수 있다.
 
 `__malloc_hook`을 `system` 함수로 덮고, `malloc('/bin/sh')` 혹은 `__free_hook`을 `system` 함수로 덮고, `free('/bin/sh')`을 통해 셸을 획득할 수 있다.
 
