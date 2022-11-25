@@ -1,9 +1,9 @@
 ---
 layout: post
-title: File Download
-subtitle: File Upload & Download
+title: SSH brute force attack
+subtitle: SSH
 categories: Vulnerability
-tags: [Web, File, Pentest]
+tags: [Web, SSH, Pentest]
 ---
 
 **It is illegal to practice on unauthorized systems. This is for learning, so please use a virtual machine to study.**
