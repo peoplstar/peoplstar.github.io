@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pwnable | [Dreamhack] hook 
-subtitle: Dreamhack-Pwnable hook
+title: Pwnable | [CTF] Left Right v2
+subtitle: 2022 Gang-Won-Do CTF
 categories: Pwnable
 tags: [Pwnable, dreakhack, Shell, Pentest]
 ---
