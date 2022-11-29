@@ -219,6 +219,8 @@ __int64 __fastcall valid_check(int a1)
 
 `half_check`를 위해 32칸을 move_right하고, `current_position`가 0이 되는 것을 위해 다시 32칸 move_left 하고자 한다.
 
+### Memory Leak
+
 ```python
 from pwn import *
 
@@ -343,11 +345,31 @@ payload = '%13$p'
 p.sendlineafter("What's your name?", payload)
 ```
 
+### RAO
+
 이후, 우리는 RET에 값을 넣어야 하기에 offset 10의 값을 확인해보면 RET 주소와 `0xd8` 차이가 나는 것을 알 수 있기에 해당 값을 받아와 해당 위치에 **one gadget**을 write할 계획이다.
 
-우리가 값을 넣어야 하는 부분은 현재 스택에서 `[rsp+0x10]`에 위치하며 **print format string indexing**은 8번째를 가리킵니다.
+현재의 FSB offset이 6일 경우 **AAAAAAAA**라는 값을 넣고 FSB exploit을 진행하게 된다면 `AAAAAAAA%6$n` 이미 입력한 AAAAAAAA에 또 다시 AAAAAAAA를 넣게 된다는 것이다.
 
-따라서, `[rsp+0x10]` (`%8$hhn`)를 통해 one-gadget을 1byte씩 넣으면 된다. 하지만 해당 offset에 값이 정확하게 들어가기 위해서는 padding이 필요하다. padding이 존재하지 않을 경우 넣고자 하는 offset에 들어가지 않기에 필수적으로 필요하다.
+그렇다면 해당 offset을 변경하여 우리가 변경할 주소를 넣어야 한다.
+
+아래는 `%100c%7$hnn\x11\x22\x33` fsb 진행했을 때의 printf의 스택 모양을 표현한 것이다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/204457547-30ff5c9b-2cd0-41db-9dfc-f86d4f457ed2.jpg" width = 360>
+</p>
+
+`%100c`에 해당하는 포맷을 offset 7에 넣게 된다면 `hnn\x11\x22\x33`에 넣게 된다. 그렇다면 입력 값을 offset 6과 offset 7에 사용하지 못하게 된다.
+
+offset 8을 사용하기 위해서는 아래와 같은 스택으로 페이로드를 짜면 된다.
+
+<p align="center">
+<img src ="https://user-images.githubusercontent.com/78135526/204460537-18d84beb-03d3-409b-bc99-8724cb60e090.jpg" width = 360>
+</p>
+
+`%100c%8$hnnAAAAA\x11\x22\x33`과 같은 페이로드를 작성하였을 때의 모습이다. 이렇게 된다면 %100c에 해당하는 포맷을 `\x11\x22\x33`에 주소에 덮어 씌울 수 있게 된다.
+
+이렇게 padding이 존재하지 않을 경우 넣고자 하는 offset에 들어가지 않기에 필수적으로 필요하다.
 
 ```python
 from pwn import *
