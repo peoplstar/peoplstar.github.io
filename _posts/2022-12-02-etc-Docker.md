@@ -64,7 +64,7 @@ wsl --set-default-version 2
 
 또한, 기본으로 `zsh`을 사용하려고 하는데 어떻게 해줘야 할 지 아직 감이 안잡힌다...그래서 시작할 때 마다 `zsh`를 입력하고 시작하는 상황이 발생하고 있다.
 
-### Ubuntun 16.04
+### Ubuntu 16.04
 
 ```
 FROM ubuntu:16.04
@@ -138,7 +138,7 @@ CMD ["zsh"]
 SHELL ["/usr/bin/zsh", "-ec"]
 ```
 
-### Ubuntun 18.04
+### Ubuntu 18.04
 
 ```
 FROM ubuntu:18.04
@@ -211,7 +211,7 @@ CMD ["zsh"]
 SHELL ["/usr/bin/zsh", "-ec"]
 ```
 
-### Ubuntun 20.04
+### Ubuntu 20.04
 
 ```
 FROM ubuntu:20.04
@@ -438,15 +438,15 @@ SHELL ["/usr/bin/zsh", "-ec"]
 
 ## Vscode & Docker 연동
 
-1. **터미널을 통해(Ctrl + j) 생성한 dockerfile이 있는 디렉토리로 이동한 후 아래의 코드를 입력하면 **image bulid**를 할 수 있다.**
+First. **터미널을 통해(Ctrl + j) 생성한 dockerfile이 있는 디렉토리로 이동한 후 아래의 코드를 입력하면 image bulid를 할 수 있다.**
 
 ```
 docker build -t 이름:태그 -f dockerfile명 .
 ```
 
-맨 뒤 **.**는 필수로 적어주셔야 합니다. 또한 태그는 없어도 되므로 `docker build -t 이름 -f dockerfile명 .`로 끝낼 수 있습니다.
+* 맨 뒤 **.**는 필수로 적어주셔야 합니다. 또한 태그는 없어도 되므로 `docker build -t 이름 -f dockerfile명 .`로 끝낼 수 있습니다.
 
-2. **위 코드로 만들어진 image를 실행하면 된다.**
+Second. **위 코드로 만들어진 image를 실행하면 된다.**
 
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/205293988-ee3f31dc-e686-47e3-bd0f-9cea4a2a9eee.png" width = 420>
@@ -456,7 +456,7 @@ docker build -t 이름:태그 -f dockerfile명 .
 docker run -itd 이름
 ```
 
-3. **생성된 container를 vscode에서 docker를 들어가고, 우리가 만든 이름에 우클릭 - Start - 다시 우클릭 - Attach Shell로 실행할 수 있다.**
+Third. **생성된 container를 vscode에서 docker를 들어가고, 우리가 만든 이름에 우클릭 - Start - 다시 우클릭 - Attach Shell로 실행할 수 있다.**
 
 <p align="center">
 <img src ="https://user-images.githubusercontent.com/78135526/205294572-1725e3d4-cb52-4c1a-9e1b-6ef5f408b654.png" width = 320>
