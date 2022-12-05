@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Pwnable | [CTF] Simple Overflow
+title: GCHD | Simple Overflow
 subtitle: Apollo Pwnable CTF
-categories: Pwnable
+categories: CTF
 tags: [Pwnable, CTF, ROP, Pentest]
 ---
 
