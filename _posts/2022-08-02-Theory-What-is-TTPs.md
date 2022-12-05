@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Theory | TTPs
+title: TTPs
 subtitle: TTPs이란 무엇일까?
-categories: Theory
-tags: [Theory, Pentest]
+categories: etc
+tags: [Pentest,TTPs]
 ---
 
 ## TTPs
