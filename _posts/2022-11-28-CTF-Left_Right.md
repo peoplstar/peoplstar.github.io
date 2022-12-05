@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Pwnable | [CTF] Left Right v2
+title: [GCHD] Left Right v2
 subtitle: 2022 Gang-Won-Do CTF
-categories: Pwnable
-tags: [Pwnable, dreakhack, Shell, Pentest]
+categories: CTF
+tags: [Pwnable, Shell, Pentest]
 ---
 
 **본 문제는 강원도 사이버 해킹방어대회 본선 문제입니다.**
