@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [GCHD] Left Right v2
+title: GCHD | Left Right v2
 subtitle: 2022 Gang-Won-Do CTF
 categories: CTF
 tags: [Pwnable, Shell, Pentest]
