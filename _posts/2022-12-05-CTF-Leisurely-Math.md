@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [TUCTF] Leisurely Math
+title: TUCTF | Leisurely Math
 subtitle: 2022 TUCTF
 categories: CTF
 tags: [Programming]

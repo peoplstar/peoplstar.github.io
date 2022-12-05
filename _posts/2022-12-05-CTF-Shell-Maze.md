@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [TUCTF] Shell Maze
+title: TUCTF | Shell Maze
 subtitle: 2022 TUCTF
 categories: CTF
 tags: [Programming]
