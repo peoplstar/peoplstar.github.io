@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwnable | [Dreamhack] sint
+title: [Dreamhack] sint
 subtitle: Dreamhack-Pwnable sint
 categories: Pwnable
 tags: [Pwnable, dreakhack, Shell, Pentest]

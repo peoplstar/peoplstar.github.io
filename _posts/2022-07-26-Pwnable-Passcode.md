@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwnable | [pwnable.kr] Passcode
+title: [pwnable.kr] Passcode
 subtitle: Passcode 문제 풀이
 categories: Pwnable
 tags: [Pwnable, malloc, pwnable.kr, Pentest]

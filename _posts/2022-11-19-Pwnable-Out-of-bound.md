@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwnable | [Dreamhack] out of bound 
+title: [Dreamhack] out of bound 
 subtitle: Dreamhack-Pwnable out of bound
 categories: Pwnable
 tags: [Pwnable, dreakhack, Shell, Pentest]

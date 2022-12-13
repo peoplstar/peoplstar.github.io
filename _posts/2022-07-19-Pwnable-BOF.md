@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pwnable | [pwnable.kr] BOF
+title: [pwnable.kr] BOF
 subtitle: BOF 문제 풀이
 categories: Pwnable
 tags: [Pwnable, BOF, pwnable.kr, Pentest]
