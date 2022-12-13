@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Dreamhack] ROP
+title: Dreamhack | ROP
 subtitle: Return Oriented Programming
 categories: Pwnable
 tags: [Pwnable, dreakhack, Pentest]

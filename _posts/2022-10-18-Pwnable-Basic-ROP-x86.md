@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Dreamhack] Basic_ROP_x86
+title: Dreamhack | Basic_ROP_x86
 subtitle: Dreamhack-Pwnable Basic_ROP_x86
 categories: Pwnable
 tags: [Pwnable, dreakhack, Shell, Pentest]

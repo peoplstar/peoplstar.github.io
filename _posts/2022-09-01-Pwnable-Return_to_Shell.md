@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Dreamhack] Return To Shell
+title: Dreamhack | Return To Shell
 subtitle: Dreamhack Return To Shell
 categories: Pwnable
 tags: [Pwnable, dreakhack, Canary, Pentest]

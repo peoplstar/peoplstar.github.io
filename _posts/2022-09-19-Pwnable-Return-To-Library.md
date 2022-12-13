@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Dreamhack] RTL
+title: Dreamhack | RTL
 subtitle: Return to Library
 categories: Pwnable
 tags: [Theory, Pentest, Pwnable]

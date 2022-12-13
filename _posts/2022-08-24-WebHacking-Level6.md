@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Webhacking.kr] Level 6
+title: Webhacking.kr | Level 6
 subtitle: Webhacking CTF Problem Solving
 categories: Web
 tags: [Pentest, Web]

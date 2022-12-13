@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [pwnable.kr] Random
+title: pwnable.kr | Random
 subtitle: Random 문제 풀이
 categories: Pwnable
 tags: [Pwnable, BOF, pwnable.kr, Pentest]
