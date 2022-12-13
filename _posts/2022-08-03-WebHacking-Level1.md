@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Webhacking.kr | Level 1
+title: [Webhacking.kr] Level 1
 subtitle: Webhacking CTF Problem Solving
-categories: Webhacking.kr
+categories: Web
 tags: [Pentest, Web]
 ---
 
