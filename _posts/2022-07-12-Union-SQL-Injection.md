@@ -2,8 +2,8 @@
 layout: post
 title: Union SQL Injection
 subtitle: Union SQL Injection
-categories: SQL
-tags: [SQL, Injection, Pentest]
+categories: Vulnerability
+tags: [SQL, Injection, Pentest, Vulnerability]
 ---
 
 **본 내용 및 실습 환경은 KISEC, 케이쉴드 주니어 교육 과정에 있음을 알려드립니다.**
