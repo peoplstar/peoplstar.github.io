@@ -15,7 +15,7 @@ tags: [Pwnable, dreakhack, Shell, Pentest]
 문제는 <a href = "https://dreamhack.io/wargame/challenges/">dreamhack.io</a>를 들어가시면 확인할 수 있습니다.
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/203474983-23dde79e-d280-47c5-b652-e55fc4974053.jpg" width = 550>
+<img src ="https://user-images.githubusercontent.com/78135526/208597684-da0822b7-1f2a-4ac1-8be0-68d0be46981f.png" width = 550>
 </p>
 
 **Off-by-one 취약점**은 경계 검사에서 하나의 오차가 있을 때 발생하는 취약점입니다. 이는 버퍼의 경계 계산 혹은 반복문의 횟수 계산 시 `<` 대신 `<=`을 쓰거나, 0부터 시작하는 인덱스를 고려하지 못할 때 발생합니다.
