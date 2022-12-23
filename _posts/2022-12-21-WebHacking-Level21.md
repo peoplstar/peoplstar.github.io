@@ -137,6 +137,7 @@ print(f':::: PASSWORD :::: {pw_length}')
 해당 값이 제대로 나오므로 payload의 guest를 `admin`으로 변경해서 진행해보면 총 **36자리**인 것을 알 수 있다.
 
 * **admin 패스워드**
+
 ```python
 # Admin Password Binary search
 pw = ''
