@@ -6,8 +6,6 @@ categories: Android
 tags: [Android, frida, rooting]
 ---
 
-**본 내용은 프리다(Frida)를 이용한 안드로이드 앱 모의해킹 서적을 통해 습득한 내용입니다.**
-
 ## 루팅 탐지 우회
 
 루팅 탐지 우회에서 진단할 APK 파일은 **OWASP**에서 배포한 `UnCrackable-Level1.apk` 파일이다.
