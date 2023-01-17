@@ -13,7 +13,7 @@ tags: [Pentest, Web]
 ## 문제 내용
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/196607794-bc483cee-3dc0-49e1-a253-378da339e671.jpg" width = 360> 
+<img src ="https://user-images.githubusercontent.com/78135526/212843300-fd7395be-dba7-411d-b536-a79b876ac335.png" width = 360> 
 </p>
 
 해당 문제를 들어가면 **\***가 표기되어 있고, 그 어떠한 것도 볼 수가 없다.
