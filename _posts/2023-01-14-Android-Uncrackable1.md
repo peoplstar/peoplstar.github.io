@@ -162,6 +162,10 @@ Java.perform(function() {
 <img src ="https://user-images.githubusercontent.com/78135526/212460860-eb0156ce-30fa-404c-bd2d-e0bd1576b2d3.png" width = 480>
 </p>
 
+```
+frida -U -f 'process name' -l 'script'
+```
+
 ## Verify
 
 이후 OK 버튼을 클릭하면 꺼지지 않고 대기 중인 것을 알 수 있다. 그리고 **EditText**가 보이는 데 **VERIFY** 버튼을 클릭하면 아래처럼 다이얼로그가 나온다.
