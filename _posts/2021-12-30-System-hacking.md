@@ -8,11 +8,11 @@ tags: [System, Memory]
 
 `I'll share the link  i heard in the youtube lecture `
 
-- ### Link : [Youtube](https://www.youtube.com/watch?v=PsXXjNL_ogc&list=PLRx0vPvlEmdAXwJnNtKIVeC27UmwljRYA&index=4)
+- Link : [Youtube](https://www.youtube.com/watch?v=PsXXjNL_ogc&list=PLRx0vPvlEmdAXwJnNtKIVeC27UmwljRYA&index=4)
 
 ## 어셈블리어 
 
-```ARM Assembly
+```armasm
 ; helloworld.s
 section  .data
         msg db "hello world"
@@ -37,7 +37,7 @@ _start:
 
 ### 반복문
 
-```ARM Assembly
+```armasm
 section .data
         msg db "A"
 
@@ -80,7 +80,7 @@ done:
 
 위 언급한 마이크로소프트 사이트에서 레지스터 아키텍쳐 표를 보면, `rax = 0` 일 때 rdi는 디스크를 읽게 되고 `rax = 1` 일때 rdi는 디스크를 쓰게 된다.
 
-```ARM Assembly
+```armasm
 section .text
         global _start
 
@@ -113,7 +113,7 @@ _start:
 
 ### 피라미드
 
-```ARM Assembly
+```armasm
 section .data
         STAR db '*'
         EMPTY db 0x0a ;줄바꿈
