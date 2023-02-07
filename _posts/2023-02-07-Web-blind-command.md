@@ -5,7 +5,7 @@ subtitle: Dreamhack Blind Command
 categories: Web
 tags: [Pentest, Web]
 ---
-
+ 
 **본 문제는 Dreamhack을 통해서 풀어 보실 수 있습니다.**
 
 **해답을 이해하며 생각을 해보면서 풀이 해보시길 바랍니다.**
