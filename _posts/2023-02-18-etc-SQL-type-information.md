@@ -324,7 +324,7 @@ SELECT column_name FROM all_tab_columns WHERE table_name = '테이블명';
 SELECT * FROM all_users
 ```
 
-## SQlite
+## SQLite
 
 **SQLite**는 `information_schema`가 없고 **sqlite_master** 라는게 있다. 
 
