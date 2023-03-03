@@ -20,7 +20,7 @@ Level 15를 들어가기 위해서 클릭하면 Alert창과 함께 처음 화면
 
 ## 문제 풀이
 
-Alert가 뜬다는 것은 <script>alert("Access_Denied")</script>가 맨 처음에 포함되어 있을 것을 예상된다.
+Alert가 뜬다는 것은 `<script>alert("Access_Denied")</script>`가 맨 처음에 포함되어 있을 것을 예상된다.
 
 Chrome에서는 [디버거 - **자바스크립트 사용 중지**]를 지원한다.
 
