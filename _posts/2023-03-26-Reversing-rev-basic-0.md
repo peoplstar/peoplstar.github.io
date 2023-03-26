@@ -6,7 +6,7 @@ categories: Reversing
 tags: [Reversing, dreamhack, Assembly]
 ---
 
-**본 문제는 reversing.kr를 통해서 풀어 보실 수 있습니다.**
+**본 문제는 dreamhack.io를 통해서 풀어 보실 수 있습니다.**
 
 **해답을 이해하며 생각을 해보면서 풀이 해보시길 바랍니다.**
 
