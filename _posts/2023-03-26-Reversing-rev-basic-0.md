@@ -36,7 +36,7 @@ int __cdecl main(int argc, const char **argv, const char **envp)
 }
 ```
 
-입력 값을 256자를 받으며 해당 `v4[256]` 배열에 젖아한다.
+입력 값을 256자를 받으며 해당 `v4[256]` 배열에 저장한다.
 
 해당 값이 `sub_140001000(v4)` 함수를 통해 return 값이 1이면 해결된다.
 
