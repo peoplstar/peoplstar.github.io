@@ -6,12 +6,6 @@ categories: etc
 tags: [pwnable, reversing]
 ---
 
-**Oracle, MySQL, MSSQL등 테스트용 사이트를 해당 [링크](http://sqlfiddle.com/#!17)를 클릭하시면 해볼 수 있습니다.**
-
-<p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/219926801-2d52b8d3-cde6-4dbf-ac82-0ad4fcd574ef.png" width = 500> 
-</p>
-
 ## What is WinDbg ?
 
 마이크로소프트에서 만든 윈도우 디버깅 프로그램으로 `Windows DDK`(드라이버 개발 SDK) 설치 시 기본적으로 제공된다. 이 프로그램은 윈도우 커널을 디버깅하여 버그를 찾는데 사용하는데, 기존 CTF pwnable 문제 풀이할 때에는 Linux 환경의 `ELF` 파일을 많이 사용했다.
