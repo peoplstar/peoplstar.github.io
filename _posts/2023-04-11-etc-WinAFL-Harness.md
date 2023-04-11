@@ -210,7 +210,7 @@ afl-fuzz.exe -i ./afl_in -o ./afl_out -D C:/_fuzz/DynamoRIO-Windows-9.0.1/bin64 
 ```
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/231084986-aa9d6db4-fd7e-4bd5-b968-09300ef859da.png" width = 400>
+<img src ="https://user-images.githubusercontent.com/78135526/231084986-aa9d6db4-fd7e-4bd5-b968-09300ef859da.png">
 </p>
 
 이로써 간단한 프로그램에 대해서 `Winafl`를 활용한 퍼징 튜토리얼을 마치도록 하겠습니다 !
