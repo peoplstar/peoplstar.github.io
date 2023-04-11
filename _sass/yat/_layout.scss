@@ -693,7 +693,7 @@ html {
 
   .sidebar {
     padding-left: 8px;
-    transition: top 0.2s, display 0.2s;
+    transition: top 1s, display 1s;
 
     @include flex-sticky($header-height + 20px);
 
