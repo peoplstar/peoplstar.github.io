@@ -189,7 +189,7 @@ drrun.exe -t drcov -- %FILE_NAME%
 이후 Input Data의 파일이 담긴 디렉토리, `cmin` 작업 결과를 저장할 디렉토리를 만들고 아래와 같이 진행하고 결과물이 생성되었는지 확인하면 됩니다.
 
 ```bash
-python ./winafl-cmin.py -D C:/_fuzz/DynamoRIO-Windows-9.0.1/bin32 -t 100000 -i %input_dir% -o %output_dir% -covtype edge -coverage_module target.exe -target_offset 0x1010 -target_method %method_name% -nargs 2 -- %타겟경로% \@@ 
+python ./winafl-cmin.py -D C:/_fuzz/DynamoRIO-Windows-9.0.1/bin32 -t 100000 -i %input_dir% -o %output_dir% -covtype edge -coverage_module target.exe -target_module target.exe -target_method %method_name% -nargs 2 -- %타겟경로% \@@
 ```
 
 <p align="center">
