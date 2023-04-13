@@ -686,7 +686,7 @@ html {
  */
 .framework {
     @extend %flex;
-
+    width: 120;%
   .main {
     @extend %flex-1;
   }
