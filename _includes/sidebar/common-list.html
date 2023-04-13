@@ -6,6 +6,8 @@
   {%- assign field = include.field -%}
 {%- endif -%}
 
+{% assign sorted_keys = keys | sort %}
+
 <div class="common-list">
   <ul>
     <li>
@@ -14,14 +16,12 @@
       </a>
     </li>
 
-    {% assign sorted_keys = keys | sort %}
-
-      {% for key in sorted_keys %}
-        <li>
-          <a href="{{ url }}#h-{{ key }}">
-            {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
-          </a>
-        </li>
-      {% endfor %}
+    {% for key in sorted_keys %}
+      <li>
+        <a href="{{ url }}#h-{{ key }}">
+          {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
+        </a>
+      </li>
+    {% endfor %}
   </ul>
 </div>
