@@ -16,12 +16,12 @@
 
     {% assign sorted_keys = keys | sort %}
 
-    {% for key in sorted_keys %}
-      <li>
-        <a href="{{ url }}#h-{{ key }}">
-          {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
-        </a>
-      </li>
-    {% endfor %}
+      {% for key in sorted_keys %}
+        <li>
+          <a href="{{ url }}#h-{{ key }}">
+            {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
+          </a>
+        </li>
+      {% endfor %}
   </ul>
 </div>
