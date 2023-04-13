@@ -14,7 +14,9 @@
       </a>
     </li>
 
-    {% for key in  keys %}
+    {% assign sorted_keys = keys | sort %}
+
+    {% for key in sorted_keys %}
       <li>
         <a href="{{ url }}#h-{{ key }}">
           {{ key }} <span>{{ site.posts | where: field, key | size }}</span>
