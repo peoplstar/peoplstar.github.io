@@ -4,6 +4,7 @@ title: Reversing | Dreamhack rev-basic-3
 subtitle: rev-basic-3 문제 풀이
 categories: Reversing
 tags: [Reversing, dreamhack, Assembly]
+use_math: true
 ---
 
 **본 문제는 dreamhack.io를 통해서 풀어 보실 수 있습니다.**

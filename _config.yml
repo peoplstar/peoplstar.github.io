@@ -206,8 +206,11 @@ yat:
 #   follow_site_theme: true
 
 # Build settings
-# highlighter: none
+highlighter: rouge
 markdown: kramdown
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 kmarkdown:
   input: GFM
 
