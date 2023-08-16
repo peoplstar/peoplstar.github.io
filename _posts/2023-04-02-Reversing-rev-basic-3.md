@@ -60,19 +60,19 @@ __int64 __fastcall sub_140001000(__int64 a1)
 
 XOR 연산은 아래와 같은 규칙이 있다.
 
-$$
+$
 a \oplus b = c\\
 a \oplus c = b\\
 b \oplus c = a
-$$
+$
 
 이러한 규칙을 이용하여 입력 값이 무엇이 되어야 하는지 알 수 있다.
 
-$$
+$
 b = (i \oplus a[i]) + 2i\\
 b - 2i = (i \oplus a[i])\\
 (b - 2i) \oplus i = a[i]
-$$
+$
 
 ```python
 data = '''
