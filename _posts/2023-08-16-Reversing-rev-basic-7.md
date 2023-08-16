@@ -110,3 +110,5 @@ for i in range(len(lst_3000)):
    
 print(rst)
 ```
+
+This formula $f(x) = x^2$ is an example.
