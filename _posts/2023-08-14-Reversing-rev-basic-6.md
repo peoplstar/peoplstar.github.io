@@ -13,7 +13,7 @@ tags: [Reversing, dreamhack, Assembly]
 ## 문제 내용
 
 <p align="center">
-<img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/4b75e068-d564-408b-b426-326310f463d2" width = 550>
+<img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/4b75e068-d564-408b-b426-326310f463d2" width = 850>
 </p>
 
 해당 프로그램을 통해 문자열 입력을 받아 옳은 입력 값임을 증명해야한다. 바이너리 분석을 위해 IDA를 사용하겠습니다.
