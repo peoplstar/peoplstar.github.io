@@ -21,7 +21,7 @@ tags: [Pentest, Web]
 ## 문제 풀이
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/236111894-7f118bb0-4739-449c-8353-ab656601fce8.png" width = 45%> 
+<img src ="https://user-images.githubusercontent.com/78135526/236111894-7f118bb0-4739-449c-8353-ab656601fce8.png"> 
 </p>
 
 로그인할 수 있는 화면이 Form이 존재하며 해당 계정은 아래처럼 두 개가 존재합니다.
@@ -78,7 +78,7 @@ if __name__ == '__main__':
 새로고침때 프록시로 잡은 부분을 `Intruder`로 보내어 `Brute Force` Payload Type 변경 후 Hex Character Set **0123456789abcdef**로 하며 총 글자수는 2글자이므로 Min, Max를 모두 2로 변경하여 던지면 아래처럼 옳은 값일 때의 Response Length가 다른 것을 알 수 있습니다.
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/236113776-e2274bbd-7e8e-4233-9ff4-daff64b3ad34.png" width = 80%> 
+<img src ="https://user-images.githubusercontent.com/78135526/236113776-e2274bbd-7e8e-4233-9ff4-daff64b3ad34.png"> 
 </p>
 
 해당 세션을 이용하여 접속을 하게 되면 플래그가 나오는 것을 확인할 수 있습니다.
