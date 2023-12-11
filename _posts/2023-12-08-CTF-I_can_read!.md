@@ -208,11 +208,15 @@ Remote 환경에서는 위 처럼 View가 제공되는 것이 아닌 Byte로 제
 
 **Pin code 생성하는 파일** : `werkzeug-2.2.2\werkzeug-2.2.2\src\werkzeug\debug\__init__.py`
 
+* **User Name** : root
+
+    * `ps -ef` : 명령어를 통한 해당 프로세스 실행 유저 정보 확인 가능
+
 * **Mac Address** : aa:fc:00:01:5d:01
 
 * **/etc/machine-id, /proc/sys/kernel/random/boot_id** : 68b7c399-244d-470b-b6fa-1efd3c0a294e
     
-    * `__init__.py` 57 line : `for filename in "/etc/machine-id", "/proc/sys/kernel/random/boot_id"`
+    * `__init__.py` 57 line : `for filename in "/etc/machine-id", "/proc/sys/kernel/random/boot_id"`, 기존 `machine-id`를 사용하였지만 없는 관계로 `boot_id` 사용
 
 * **/proc/self/cgroup** : libpod-ab9607f5d4e7586b770c3cbdee2f6569cf38521c027de1b0e9033c393418aa0f
 
