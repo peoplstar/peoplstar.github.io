@@ -288,8 +288,6 @@ print(get_pin_and_cookie_name())
 
 * **Frame Number** : 139805351218192
 
-143-054-970
-
 ### Exploit
 
 생성한 Pin Code와 이전에 확인하였던 Log를 통해서 `curl`로 접속을 시도해보겠습니다.
