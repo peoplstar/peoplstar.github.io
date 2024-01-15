@@ -45,7 +45,7 @@ Core Data의 데이터 모델 에디터를 통해 데이터의 유형과 관계�
 * **좌측 상단 메뉴 > Local Data Storage > Core Data**
 
 <p align="center">
-<img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/4e2c819a-73fd-459a-a96c-98bfcd0f7dfa">
+<img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/4e2c819a-73fd-459a-a96c-98bfcd0f7dfa" width = 450>
 </p>
 
 아이디 및 이메일과 같은 정보를 입력하여 버튼을 크릭하면 Core Data에 저장되었다는 것을 확인할 수 있다.
