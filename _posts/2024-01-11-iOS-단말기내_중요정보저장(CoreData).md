@@ -44,7 +44,11 @@ Core Data의 데이터 모델 에디터를 통해 데이터의 유형과 관계�
 
 * **좌측 상단 메뉴 > Local Data Storage > Core Data**
 
-Input 데이터를 삽입하여 2134512361버튼을 눌러 저장하게 되면 **Data saved in Core Data** Alert과 함께 저장되었음을 확인할 수 있습니다.
+<p align="center">
+<img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/4e2c819a-73fd-459a-a96c-98bfcd0f7dfa">
+</p>
+
+아이디 및 이메일과 같은 정보를 입력하여 버튼을 크릭하면 Core Data에 저장되었다는 것을 확인할 수 있다.
 
 <p align="center">
 <img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/884f6fa2-ca56-40db-b730-1f9d081f2916">
