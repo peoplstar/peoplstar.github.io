@@ -24,7 +24,7 @@ iOS 기기에는 다양한 유형의 중요한 정보가 저장될 수 있다. �
 <img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/621832a8-4539-4675-909b-be4c2c86ab70">
 </p>
 
-Core Data는 데이터 관리 및 지속성을 지원하는 iOS의 프레임워크로 이를 통해 SQLite, XML 또는 바이너리 파일과 같은 영구 저장소에서 데이터를 생성, 검색, 업데이트 및 삭제할 수 있습니다.
+`Core Data`는 데이터 관리 및 지속성을 지원하는 iOS의 프레임워크로 이를 통해 SQLite, XML 또는 바이너리 파일과 같은 영구 저장소에서 데이터를 생성, 검색, 업데이트 및 삭제할 수 있습니다.
 
 Core Data를 사용하여 오프라인 사용을 위해 애플리케이션의 영구 데이터를 저장하고, 임시 데이터를 캐싱하고, 단일 기기에서 앱에 실행 취소 기능을 추가할 수 있습니다. 
 
@@ -50,7 +50,7 @@ Input 데이터를 삽입하여 2134512361버튼을 눌러 저장하게 되면 *
 <img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/884f6fa2-ca56-40db-b730-1f9d081f2916">
 </p>
 
-* **PATH**
+* **/private/var/mobile/Containers/Data/Application/AAA8DAB1-874E-4B9D-96B7-52E3FB08AC5E/Library/Application Support**
 
 `WinSCP`프로그램을 이용하여 해당 경로를 확인하게 되면 Core Data에 대한 DB 파일이 저장 되어 있는 것을 확인할 수 있다.
 
