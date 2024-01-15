@@ -54,7 +54,7 @@ Core Data의 데이터 모델 에디터를 통해 데이터의 유형과 관계�
 <img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/884f6fa2-ca56-40db-b730-1f9d081f2916">
 </p>
 
-* **/private/var/mobile/Containers/Data/Application/AAA8DAB1-874E-4B9D-96B7-52E3FB08AC5E/Library/Application Support**
+* `/private/var/mobile/Containers/Data/Application/AAA8DAB1-874E-4B9D-96B7-52E3FB08AC5E/Library/Application Support`
 
 `WinSCP`프로그램을 이용하여 해당 경로를 확인하게 되면 Core Data에 대한 DB 파일이 저장 되어 있는 것을 확인할 수 있다.
 
