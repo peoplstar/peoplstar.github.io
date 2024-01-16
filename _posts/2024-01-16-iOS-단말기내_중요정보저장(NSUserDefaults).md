@@ -77,7 +77,3 @@ iOS 기기에는 다양한 유형의 중요한 정보가 저장될 수 있다. �
 ## Reference
 
 * [https://developer.apple.com/documentation/foundation/nsuserdefaults](https://developer.apple.com/documentation/foundation/nsuserdefaults)
-
-* [https://medium.com/@vipandey54/core-data-1fe021cd7fa](https://medium.com/@vipandey54/core-data-1fe021cd7fa)
-
-* [https://seed.kisa.or.kr/kisa/Board/23/detailView.do](https://seed.kisa.or.kr/kisa/Board/23/detailView.do)
