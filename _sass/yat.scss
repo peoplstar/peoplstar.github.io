@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: Helvetica, Arial, Oswald, sans-serif, !default;
+$base-font-family: D2Coding, Helvetica, Arial, Oswald, sans-serif, !default;
 $base-font-size: 15px !default;
 $base-font-weight: 450 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -68,3 +68,13 @@ $on-laptop:        800px !default;
   "misc/gitment",
   "misc/click-to-top"
 ;
+
+/* D2Coding */
+@font-face {
+  font-family: "D2Coding";
+  font-style: normal;
+  font-weight: normal;
+  src: url( "./images/subset-D2Codingligature.woff2" ) format( "woff2" ),
+                  url('./images/subset-D2Codingligature.woff') format('woff');
+  font-display: swap;
+}
