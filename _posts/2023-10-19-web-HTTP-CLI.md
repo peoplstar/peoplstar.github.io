@@ -121,8 +121,6 @@ client_socket.close()
 
 `.` 문자를 사용했기에 통신이 이루어지지 않는다. `flag.txt` 파일은 서버내에 있으므로 localhost 통신을 통해 파일을 **/app/flag.txt** 접근하여 파일을 읽어와야 한다.
 
-<center>
-
 |Expression|Value|
 |:--------:|:---:|
 |Decimal               | 2130706433 (127.0.0.1)|
@@ -132,8 +130,6 @@ client_socket.close()
 |Hexademical           | 0x8080808 (8.8.8.8)|
 |Octal & Hexademical   | 010.0x0000008.00000010.8 (8.8.8.8)|
 |Decimal & Hexademical | 8.0x000000000000000080808 (8.8.8.8)|
-
-</center>
 
 **localhost**와 **.**를 우회하기 위해서는 10진수 표현인 `2130706433`을 이용해야한다.
 
