@@ -209,6 +209,8 @@ table {
   display: block;
   margin-bottom: $spacing-unit;
   width: 100%;
+  margin-left: auto; 
+  margin-right: auto;
   text-align: $table-text-align;
   color: lighten($text-color, 5%);
   border-collapse: collapse;
