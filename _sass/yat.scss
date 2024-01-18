@@ -2,7 +2,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: D2Coding, Helvetica, Arial, Oswald, sans-serif, !default;
+$base-font-family: D2Coding, 'D2 coding', Helvetica, Arial, Oswald, sans-serif, !default;
 $base-font-size: 15px !default;
 $base-font-weight: 450 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -74,7 +74,7 @@ $on-laptop:        800px !default;
   font-family: "D2Coding";
   font-style: normal;
   font-weight: normal;
-  src: url( "./images/subset-D2Codingligature.woff2" ) format( "woff2" ),
-                  url('./images/subset-D2Codingligature.woff') format('woff');
+  src: url( "https://cdn.jsdelivr.net/gh/everydayminder/assets/subset-D2Coding.woff2" ) format( "woff2" ),
+                  url('https://cdn.jsdelivr.net/gh/everydayminder/assets/subset-D2Coding.woff') format('woff');
   font-display: swap;
 }
