@@ -1,5 +1,5 @@
-$dark-background-color:       #0e0e0e !default;
-$dark-text-color: #bbb !default;
+$dark-background-color:       #252a34 !default;
+$dark-text-color: #eaeaea !default;
 
 html[data-theme="dark"]  {
   &[data-scroll-status='top'] {
@@ -36,19 +36,19 @@ html[data-theme="dark"]  {
   }
 
   table {
-    color: #9d9d9d;
+    color: #eaeaea;
 
     th {
-      background-color: #050505;
+      background-color: #202030;
     }
 
     tr:nth-child(even) {
-      background-color: #080808;
+      background-color: #202030;
     }
   }
 
   .site-header {
-    background-color: #090909;
+    background-color: #202030;
 
     .site-brand {
       .site-brand-inner {
@@ -209,4 +209,3 @@ html[data-theme="dark"]  {
     }
   }
 }
-
