@@ -62,6 +62,19 @@ frida-trace -U -f com.highaltitudehack.DVIAswiftv2 -m "*[* *jail*]"
 
 현재 `jailbreaTest1Tapped`을 비롯한 `jailbreaTest5Tapped`까지 모두 확인되고 `Jailbreak Test1` 클릭 시 `-[DVIA_v2.JailbreakDetectionViewController jailbreakTest1Tapped:0x10ce0b580]`이 호출되는 것을 확인할 수 있다.
 
+iOS에서 앱을 실행할 때는 **앱의 Binary** 자체가 실행되고 있다. 따라서 분석하기 위해서는 `ipa` 파일이 아닌 `Binary` 파일을 찾아서 분석해야한다.
+
+단말기와 PC를 같은 네트워크에 연결하고 단말기 네트워크 IP를 통해 **SSH** 붙어서 실행중인 바이너리를 검색한다._(탈옥 후 기본 ROOT 패스워드는 **alpine**이다)_
+
+<p align="center">
+<img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/5a51d272-2494-4f86-9327-70ac65e6e6a8">
+</p>
+
+`ssh`로 붙은 이후 앱을 실행하고 `ps -ef | grep /var`를 입력하게 되면 사용중인 바이너리의 위치를 확인할 수 있다.
+
+해당 파일을 **WinSCP**를 통해 PC로 이동시켜 **Ghidra**나 **IDA, Hopper**를 통해 분석을 진행하면 된다.
+
+
 <p align="center">
 <img src ="https://github.com/peoplstar/peoplstar.github.io/assets/78135526/cb9a01b1-4e92-4e74-9686-9fb13b59ff11">
 </p>
