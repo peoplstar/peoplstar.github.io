@@ -26,62 +26,62 @@ tags: [iOS, Moblie]
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+|항목|내용|
 | :--:   | :--:  |
 |  **NSBluetoothAlwaysUsageDescription**  |   앱이 블루투스에 액세스해야 하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `Calendar and reminders`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 | 내용 |
 | :--:   | :--:  |
 |  **NSCalendarsFullAccessUsageDescription**  |   앱에서 캘린더 데이터 읽기 및 쓰기 액세스 권한을 요청하는 이유를 알려주는 메시지 |
 | **NSCalendarsWriteOnlyAccessUsageDescription** | 앱에서 캘린더 이벤트 생성을 위한 액세스 권한을 요청하는 이유를 알려주는 메시지 |
 | **NSRemindersFullAccessUsageDescription** | 앱에서 미리 알림 데이터를 읽고 쓰기 위한 액세스 권한을 요청하는 이유를 알려주는 메시지 |
 
-</div>
+ 
 
 * `Camera and Microphone`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 |  **NSCameraUsageDescription**  |   앱이 디바이스의 카메라에 대한 액세스를 요청하는 이유를 사용자에게 알려주는 메시지 |
 | **NSMicrophoneUsageDescription** | 앱이 디바이스의 마이크에 대한 액세스를 요청하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
-</div>
+ 
 
 * `Contacts`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 |  **NSContactsUsageDescription**  |   앱이 사용자의 연락처에 대한 액세스를 요청하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `Face ID`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 |  **NSFaceIDUsageDescription**  |   앱에서 Face ID로 인증 기능을 요청하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `Files and folders`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 |  **NSDesktopFolderUsageDescription**  |   앱이 사용자의 데스크톱 폴더에 액세스해야 하는 이유를 사용자에게 알려주는 메시지 |
 | **NSDocumentsFolderUsageDescription** | 앱이 사용자의 문서 폴더에 액세스해야 하는 이유를 사용자에게 알려주는 메시지 |
@@ -90,17 +90,17 @@ tags: [iOS, Moblie]
 | **NSRemovableVolumesUsageDescription** | 앱이 이동식 볼륨의 파일에 액세스해야 하는 이유를 사용자에게 알려주는 메시지 |
 | **NSFileProviderDomainUsageDescription** | 앱이 파일 제공업체가 관리하는 파일에 액세스해야 하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `Game center`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 |  **NSGKFriendListUsageDescription**  |   앱이 게임 센터 친구 목록에 액세스해야 하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `Health`
 
@@ -113,17 +113,17 @@ tags: [iOS, Moblie]
 | **NSHealthUpdateUsageDescription** | 앱이 HealthKit 스토어에 샘플을 저장할 수 있는 권한을 요청한 이유를 설명하는 사용자에게 보내는 메시지 |
 | **NSHealthRequiredReadAuthorizationTypeIdentifiers** | 앱이 읽기 권한을 얻어야 하는 임상 기록 데이터 유형 |
 
-</div>
+ 
 
 * `Home`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 |  **NSHomeKitUsageDescription**  | 앱이 사용자의 홈키트 구성 데이터에 대한 액세스를 요청하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `Location`
 
@@ -138,38 +138,38 @@ tags: [iOS, Moblie]
 | **NSWidgetWantsLocation** | 위젯이 사용자의 위치 정보를 사용하는지 여부를 나타내는 Boolean 값 |
 | **NSLocationDefaultAccuracyReduced** | 앱이 기본적으로 위치 정확도 감소를 요청할지 여부를 나타내는 Boolean 값 |
 
-</div>
+ 
 
 * `Game center`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 | **NSGKFriendListUsageDescription** | 앱이 게임 센터 친구 목록에 액세스해야 하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `MediaPlayer`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 |  내용 |
 | :--:   | :--:  |
 | **NSAppleMusicUsageDescription** | 앱이 사용자의 미디어 라이브러리에 대한 액세스를 요청하는 이유를 사용자에게 알려주는 메시지 |
 
-</div>
+ 
 
 * `Motion`
 
 <div align='center'>
 
-|<div style="width:281px">항목</div>|<div style="width:550px">내용</div>|
+| 항목 | 내용 |
 | :--:   | :--:  |
 | **NSMotionUsageDescription** | 앱이 디바이스의 모션 데이터에 대한 액세스를 요청하는 이유를 사용자에게 알려주는 메시지 |
 | **NSFallDetectionUsageDescription** | 낙상 감지 이벤트 데이터에 대한 앱의 액세스 권한 요청을 설명하는 사용자에게 보내는 메시지 |
 
-</div>
+ 
 
 이를 제외한 Networking, NFC, Photos, Scripting, Security, Sensors, Siri 등이 있으니 하단 [References](#reference)를 참고하면 되겠습니다.
 
