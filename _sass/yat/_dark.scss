@@ -1,5 +1,5 @@
 $dark-background-color:       #22272E !default;
-$dark-text-color: #eaeaea !default; 
+$dark-text-color: #ADBAC7 !default;
 
 html[data-theme="dark"]  {
   &[data-scroll-status='top'] {
@@ -48,7 +48,7 @@ html[data-theme="dark"]  {
   }
 
   .site-header {
-    background-color: #202030;
+    background-color: #1C2128;
 
     .site-brand {
       .site-brand-inner {
@@ -84,8 +84,8 @@ html[data-theme="dark"]  {
   }
 
   .site-footer {
-    color: #fff;
-    background-color: #000;
+    color: #eaeaea;
+    background-color: #1C2128;
   }
 
   .left-vsplit:before {
