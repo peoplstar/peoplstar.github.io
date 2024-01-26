@@ -24,7 +24,7 @@ tags: [iOS, Moblie]
 
 * `Bluetooth`
 
-<div align='center'>
+ 
 
 |항목|내용|
 | :--:   | :--:  |
@@ -34,7 +34,7 @@ tags: [iOS, Moblie]
 
 * `Calendar and reminders`
 
-<div align='center'>
+ 
 
 | 항목 | 내용 |
 | :--:   | :--:  |
@@ -46,7 +46,7 @@ tags: [iOS, Moblie]
 
 * `Camera and Microphone`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -59,7 +59,7 @@ tags: [iOS, Moblie]
 
 * `Contacts`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -69,7 +69,7 @@ tags: [iOS, Moblie]
 
 * `Face ID`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -79,7 +79,7 @@ tags: [iOS, Moblie]
 
 * `Files and folders`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -94,7 +94,7 @@ tags: [iOS, Moblie]
 
 * `Game center`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -104,7 +104,7 @@ tags: [iOS, Moblie]
 
 * `Health`
 
-<div align='center'>
+ 
 
 |항목|내용|
 | :--:   | :--:  |
@@ -117,7 +117,7 @@ tags: [iOS, Moblie]
 
 * `Home`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -127,7 +127,7 @@ tags: [iOS, Moblie]
 
 * `Location`
 
-<div align='center'>
+ 
 
 | 항목 | 내용 |
 | :--:   | :--:  |
@@ -142,7 +142,7 @@ tags: [iOS, Moblie]
 
 * `Game center`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -152,7 +152,7 @@ tags: [iOS, Moblie]
 
 * `MediaPlayer`
 
-<div align='center'>
+ 
 
 | 항목 |  내용 |
 | :--:   | :--:  |
@@ -162,7 +162,7 @@ tags: [iOS, Moblie]
 
 * `Motion`
 
-<div align='center'>
+
 
 | 항목 | 내용 |
 | :--:   | :--:  |
