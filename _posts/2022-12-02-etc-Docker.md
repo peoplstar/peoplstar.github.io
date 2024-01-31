@@ -156,8 +156,6 @@ WORKDIR /root
 RUN apt-get upgrade
 RUN apt-get update
 RUN apt-get install -y netcat
-RUN apt-get update 
-RUN apt-get install -y netcat
 RUN apt-get install libssl-dev -y
 RUN apt-get install vim -y
 RUN apt-get install git -y
@@ -228,8 +226,6 @@ WORKDIR /root
 
 RUN apt-get upgrade
 RUN apt-get update
-RUN apt-get install -y netcat
-RUN apt-get update 
 RUN apt-get install -y netcat
 RUN apt-get install libssl-dev -y
 RUN apt-get install vim -y
