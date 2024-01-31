@@ -80,7 +80,7 @@ RUN sed -i 's@archive.ubuntu.com@kr.archive.ubuntu.com@g' /etc/apt/sources.list
 WORKDIR /root
 
 RUN apt-get update 
-RUN apt-get install -y netcat
+RUN apt-get install netcat -y
 RUN apt-get install libssl-dev -y
 RUN apt-get install vim -y
 RUN apt-get install git -y
@@ -155,7 +155,7 @@ WORKDIR /root
 
 RUN apt-get upgrade
 RUN apt-get update
-RUN apt-get install -y netcat
+RUN apt-get install netcat -y
 RUN apt-get install libssl-dev -y
 RUN apt-get install vim -y
 RUN apt-get install git -y
@@ -226,7 +226,7 @@ WORKDIR /root
 
 RUN apt-get upgrade
 RUN apt-get update
-RUN apt-get install -y netcat
+RUN apt-get install netcat -y
 RUN apt-get install libssl-dev -y
 RUN apt-get install vim -y
 RUN apt-get install git -y
@@ -300,7 +300,7 @@ RUN sed -i -r 's/([a-z]{2}.)?archive.ubuntu.com/old-releases.ubuntu.com/g' /etc/
 RUN sed -i -r 's/security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 
 RUN apt-get update
-RUN apt-get install -y netcat
+RUN apt-get install netcat -y
 RUN apt-get install libssl-dev -y
 RUN apt-get install vim -y
 RUN apt-get install git -y
@@ -370,10 +370,8 @@ RUN sed -i 's@archive.ubuntu.com@kr.archive.ubuntu.com@g' /etc/apt/sources.list
 
 WORKDIR /root
 
-RUN apt update && apt install -y netcat
-
 RUN apt-get update 
-RUN apt-get install -y netcat
+RUN apt-get install netcat -y
 RUN apt-get install libssl-dev -y
 RUN apt-get install vim -y
 RUN apt-get install git -y
