@@ -75,7 +75,7 @@ ENV TZ Asia/Seoul
 ENV PYTHONIOENCODING UTF-8
 ENV LC_CTYPE C.UTF-8
 
-RUN sed -i 's@archive.ubuntu.com@kr.archive.ubuntu.com@g' /etc/apt/sources.list
+RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirror.kakao.com/g" /etc/apt/sources.list
 
 WORKDIR /root
 
@@ -149,7 +149,7 @@ ENV TZ Asia/Seoul
 ENV PYTHONIOENCODING UTF-8
 ENV LC_CTYPE C.UTF-8
 
-RUN sed -i 's@archive.ubuntu.com@kr.archive.ubuntu.com@g' /etc/apt/sources.list
+RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirror.kakao.com/g" /etc/apt/sources.list
 
 WORKDIR /root
 
@@ -220,7 +220,7 @@ ENV TZ Asia/Seoul
 ENV PYTHONIOENCODING UTF-8
 ENV LC_CTYPE C.UTF-8
 
-RUN sed -i 's@archive.ubuntu.com@kr.archive.ubuntu.com@g' /etc/apt/sources.list
+RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirror.kakao.com/g" /etc/apt/sources.list
 
 WORKDIR /root
 
@@ -291,7 +291,7 @@ ENV TZ Asia/Seoul
 ENV PYTHONIOENCODING UTF-8
 ENV LC_CTYPE C.UTF-8
 
-RUN sed -i 's@archive.ubuntu.com@kr.archive.ubuntu.com@g' /etc/apt/sources.list
+RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirror.kakao.com/g" /etc/apt/sources.list
 
 WORKDIR /root
 
@@ -366,7 +366,7 @@ ENV TZ Asia/Seoul
 ENV PYTHONIOENCODING UTF-8
 ENV LC_CTYPE C.UTF-8
 
-RUN sed -i 's@archive.ubuntu.com@kr.archive.ubuntu.com@g' /etc/apt/sources.list
+RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirror.kakao.com/g" /etc/apt/sources.list
 
 WORKDIR /root
 
