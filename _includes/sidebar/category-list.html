@@ -6,4 +6,6 @@
 {% assign keys = categories %}
 {% assign field = 'categories' %}
 {% assign url = '/categories.html' | relative_url %}
-{% include sidebar/common-list.html %}
+{% if site.sidebar_main%} 
+    {% include sidebar/category_list_main.html %}
+{%endif %}

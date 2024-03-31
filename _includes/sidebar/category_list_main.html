@@ -1,0 +1,36 @@
+<!--전체 글 수를 세기 위한 연산. sum 변수에 전체 글 수 저장-->
+{% assign sum = site.posts | size %}
+
+<div>
+
+  <!--전체 글 수-->
+  <div class="common-list">
+    <ul>
+      <li>
+        <a href="{{ '/index.html' | relative_url }}">
+          All<span>{{ site.posts.size }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+<!--카테고리 목록-->
+{%- assign categories = site.data.main_category -%}
+{% for category in categories %}
+    <div class="parent_cat">{{ category.name }}</div>
+    <div class="common-list">
+      <ul>
+        {% for subCategory in category.subcategories %}
+        <li>
+          <a href="{{ url }}#h-{{ subCategory }}">
+            {{ subCategory }}
+            <span>{{ site.posts | where: field,  subCategory | size  }}</span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+{% endfor %}
+
+
+</div>

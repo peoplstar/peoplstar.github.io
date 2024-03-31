@@ -220,3 +220,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+sidebar_main: true
+sidebar_defualt: false

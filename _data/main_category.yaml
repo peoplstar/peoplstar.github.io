@@ -1,0 +1,31 @@
+  # - name: "Dreamhack"
+  #   subcategories:
+  #     - "Reversing"
+  #     - "Web"
+  #     - "Pwnable"
+  - name: "Reversing"
+    subcategories:
+      - "DLL"
+      - "Fuzzing"
+  - name: "K-Shield"
+    subcategories:
+      - "Pentest"
+  - name: "Mobile"
+    subcategories:
+      - "AOS"
+      - "iOS"
+  - name: "Vulnerability"
+    subcategories:
+      - "Basic"
+      - "CVE"
+  - name: "Wargame"
+    subcategories:
+      - "dreamhack.io"
+      - "reversing.kr"
+      - "pwnable.kr"
+      - "webhacking.kr"
+  - name: "etc"
+    subcategories:
+      - "Anything"
+      - "CTF"
+      - "Environment"
