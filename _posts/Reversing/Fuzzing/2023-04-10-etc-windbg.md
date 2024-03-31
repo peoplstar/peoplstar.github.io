@@ -2,7 +2,7 @@
 layout: post
 title: WinDbg 디버깅 
 subtitle: WinDbg 설치 및 사용법
-categories: etc
+categories: Fuzzing
 tags: [pwnable, reversing]
 ---
 

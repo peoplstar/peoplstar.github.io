@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | error based sql injection
 subtitle: Dreamhack Error Based SQLi
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
  

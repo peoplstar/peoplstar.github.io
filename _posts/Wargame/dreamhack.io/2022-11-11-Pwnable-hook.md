@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | hook 
 subtitle: Dreamhack-Pwnable hook
-categories: Pwnable
+categories: dreamhack.io
 tags: [Pwnable, dreakhack, Shell, Pentest]
 ---
 

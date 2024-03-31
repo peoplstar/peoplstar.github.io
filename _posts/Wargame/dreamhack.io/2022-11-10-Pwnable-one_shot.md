@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | one shot
 subtitle: Dreamhack-Pwnable one shot
-categories: Pwnable
+categories: dreamhack.io
 tags: [Pwnable, dreakhack, Shell, Pentest]
 ---
 

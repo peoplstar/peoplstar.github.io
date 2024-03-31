@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | File Download 1
 subtitle: Dreamhack File Download 1
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
 

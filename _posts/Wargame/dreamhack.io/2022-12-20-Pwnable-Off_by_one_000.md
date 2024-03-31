@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | Off By One_000
 subtitle: Dreamhack-Pwnable off_by_one_000
-categories: Pwnable
+categories: dreamhack.io
 tags: [Pwnable, dreakhack, Shell, Pentest]
 ---
 

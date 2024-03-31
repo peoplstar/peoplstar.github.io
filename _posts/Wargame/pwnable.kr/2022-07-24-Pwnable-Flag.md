@@ -2,7 +2,7 @@
 layout: post
 title: pwnable.kr | FLAG
 subtitle: Flag 문제 풀이
-categories: Pwnable
+categories: pwnable.kr
 tags: [Pwnable, malloc, pwnable.kr, Pentest]
 ---
 

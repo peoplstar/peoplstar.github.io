@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | Command Injection 1
 subtitle: Dreamhack Command Injection 1
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
 

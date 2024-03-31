@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | fho
 subtitle: Dreamhack-Pwnable fho
-categories: Pwnable
+categories: dreamhack.io
 tags: [Pwnable, dreakhack, Shell, Pentest]
 ---
 

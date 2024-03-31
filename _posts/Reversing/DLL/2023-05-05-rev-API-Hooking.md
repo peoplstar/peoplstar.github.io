@@ -2,7 +2,7 @@
 layout: post
 title: API Hooking
 subtitle: API Hooking 정의 및 실습
-categories: Reversing
+categories: DLL
 tags: [Reversing, DLL]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | web-HTTP-CLI
 subtitle: web-HTTP-CLI 문제 풀이
-categories: Web
+categories: dreamhack.io
 tags: [dreamhack, Pentest, Web]
 ---
 

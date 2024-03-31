@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | pathtraversal
 subtitle: Dreamhack Path Traversal
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
  

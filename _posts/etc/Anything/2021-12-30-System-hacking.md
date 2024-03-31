@@ -2,7 +2,7 @@
 layout: post
 title: 시스템 해킹
 subtitle: 메모리 & 어셈블리
-categories: etc
+categories: Anything
 tags: [System, Memory]
 ---
 

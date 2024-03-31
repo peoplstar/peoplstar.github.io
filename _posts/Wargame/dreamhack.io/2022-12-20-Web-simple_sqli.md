@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | Simple SQLi
 subtitle: Dreamhack simple_sqli
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
 

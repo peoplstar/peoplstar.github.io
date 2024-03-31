@@ -2,7 +2,7 @@
 layout: post
 title: SQL 정보 수집
 subtitle: Database 종류 및 테이블, 칼럼 정보 수집
-categories: etc
+categories: Anything
 tags: [Pentest, SQL]
 ---
  

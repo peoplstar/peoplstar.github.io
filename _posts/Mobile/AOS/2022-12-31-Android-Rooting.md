@@ -2,7 +2,7 @@
 layout: post
 title: Android rooting guide
 subtitle: Android rooting
-categories: Android
+categories: AOS
 tags: [Docker, vscode, wsl]
 ---
 

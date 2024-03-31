@@ -2,7 +2,7 @@
 layout: post
 title: Harness를 이용한 WinAFL
 subtitle: WinAFL Harness 작성
-categories: fuzzing
+categories: Fuzzing
 tags: [Reversing, fuzzing]
 ---
 

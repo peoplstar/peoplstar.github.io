@@ -2,7 +2,7 @@
 layout: post
 title: Android | Uncrackable Lv 1
 subtitle: Frida Android Rooting Detection Bypass, Uncrackable1
-categories: Android
+categories: AOS
 tags: [Android, frida, rooting]
 ---
 

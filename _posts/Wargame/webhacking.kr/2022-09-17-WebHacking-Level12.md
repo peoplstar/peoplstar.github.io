@@ -2,7 +2,7 @@
 layout: post
 title: Webhacking.kr | Level 12
 subtitle: Webhacking CTF Problem Solving
-categories: Web
+categories: webhacking.kr
 tags: [Pentest, Web]
 ---
 

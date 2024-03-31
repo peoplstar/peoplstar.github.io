@@ -2,7 +2,7 @@
 layout: post
 title: What is Fuzzing?
 subtitle: Fuzzing 정의
-categories: fuzzing
+categories: Fuzzing
 tags: [Reversing, fuzzing]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: DLL Hijacking
 subtitle: DLL Hijacking 정의 및 실습
-categories: Reversing
+categories: DLL
 tags: [Reversing, DLL]
 ---
 

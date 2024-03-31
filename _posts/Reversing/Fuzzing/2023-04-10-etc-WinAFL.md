@@ -2,7 +2,7 @@
 layout: post
 title: WinAFL 설치 및 사용
 subtitle: Windows American Fuzzy Lob
-categories: fuzzing
+categories: Fuzzing
 tags: [Reversing, fuzzing]
 ---
 

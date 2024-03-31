@@ -2,7 +2,7 @@
 layout: post
 title: CTFd 환경 구축
 subtitle: 환경 구축 및 pwnable 문제
-categories: etc
+categories: Environment
 tags: [CTFd, docker]
 ---
 

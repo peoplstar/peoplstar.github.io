@@ -2,7 +2,7 @@
 layout: post
 title: Jadx 설치
 subtitle: Frida Android Rooting Detection Bypass
-categories: Android
+categories: AOS
 tags: [Android, frida, rooting]
 ---
 

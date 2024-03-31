@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | blind sql injection advanced
 subtitle: Dreamhack Blind SQLi advanced
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
  

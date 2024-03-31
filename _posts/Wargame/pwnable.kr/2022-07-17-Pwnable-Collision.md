@@ -2,7 +2,7 @@
 layout: post
 title: pwnable.kr | Collision
 subtitle: Collision 문제 풀이
-categories: Pwnable
+categories: pwnable.kr
 tags: [Pwnable, pwnable.kr, Pentest]
 ---
 

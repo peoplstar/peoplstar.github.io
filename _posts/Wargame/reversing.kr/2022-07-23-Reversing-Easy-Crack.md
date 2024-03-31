@@ -2,7 +2,7 @@
 layout: post
 title: Reversing | reversing.kr 1번 Easy Crack
 subtitle: Easy Crack 문제 풀이
-categories: Reversing
+categories: pwnable.kr
 tags: [Reversing, reversing.kr, Assembly]
 ---
 

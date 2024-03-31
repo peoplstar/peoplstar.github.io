@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | session
 subtitle: Dreamhack session
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
  

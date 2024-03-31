@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | sql injection bypass WAF Advanced
 subtitle: sql injection bypass WAF Advanced 문제 풀이
-categories: Web
+categories: dreamhack.io
 tags: [dreamhack, Pentest, Web]
 ---
 

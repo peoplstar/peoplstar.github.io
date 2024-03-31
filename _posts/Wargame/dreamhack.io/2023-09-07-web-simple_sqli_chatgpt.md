@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | simple_sqli_chatgpt
 subtitle: simple_sqli_chatgpt 문제 풀이
-categories: Web
+categories: dreamhack.io
 tags: [dreamhack, Pentest, Web]
 ---
 

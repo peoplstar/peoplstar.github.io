@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | Return To Shell
 subtitle: Dreamhack Return To Shell
-categories: Pwnable
+categories: dreamhack.io
 tags: [Pwnable, dreakhack, Canary, Pentest]
 ---
 

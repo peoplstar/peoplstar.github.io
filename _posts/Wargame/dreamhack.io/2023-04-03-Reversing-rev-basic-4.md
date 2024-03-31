@@ -2,7 +2,7 @@
 layout: post
 title: Reversing | Dreamhack rev-basic-4
 subtitle: rev-basic-4 문제 풀이
-categories: Reversing
+categories: dreamhack.io
 tags: [Reversing, dreamhack, Assembly]
 ---
 

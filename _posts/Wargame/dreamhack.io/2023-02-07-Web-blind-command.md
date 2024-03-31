@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | blind-command
 subtitle: Dreamhack Blind Command
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
  

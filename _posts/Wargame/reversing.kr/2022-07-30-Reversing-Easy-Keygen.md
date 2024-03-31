@@ -2,7 +2,7 @@
 layout: post
 title: Reversing | reversing.kr 2번 Easy Keygen
 subtitle: Easy Keygen 문제 풀이
-categories: Reversing
+categories: pwnable.kr
 tags: [Reversing, reversing.kr, Assembly]
 ---
 

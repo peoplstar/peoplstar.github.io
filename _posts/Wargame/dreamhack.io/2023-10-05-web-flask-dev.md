@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | Flask-Dev
 subtitle: Flask-Dev 문제 풀이
-categories: Web
+categories: dreamhack.io
 tags: [dreamhack, Pentest, Web]
 ---
 

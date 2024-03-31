@@ -2,7 +2,7 @@
 layout: post
 title: Docker & vscode Enviroment
 subtitle: Docker & vscode
-categories: etc
+categories: Environment
 tags: [Docker, vscode, wsl]
 ---
 

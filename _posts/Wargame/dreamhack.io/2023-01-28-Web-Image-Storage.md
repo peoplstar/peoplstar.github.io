@@ -2,7 +2,7 @@
 layout: post
 title: Dreamhack | Image Storage
 subtitle: Dreamhack Image Storage
-categories: Web
+categories: dreamhack.io
 tags: [Pentest, Web]
 ---
 
