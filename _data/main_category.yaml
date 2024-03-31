@@ -1,8 +1,6 @@
-  # - name: "Dreamhack"
-  #   subcategories:
-  #     - "Reversing"
-  #     - "Web"
-  #     - "Pwnable"
+  - name: "CTF"
+    subcategories:
+      - "CTF"
   - name: "Reversing"
     subcategories:
       - "DLL"
@@ -27,5 +25,4 @@
   - name: "etc"
     subcategories:
       - "Anything"
-      - "CTF"
       - "Environment"
