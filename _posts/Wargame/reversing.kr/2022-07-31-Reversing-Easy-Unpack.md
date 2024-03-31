@@ -2,7 +2,7 @@
 layout: post
 title: Reversing | reversing.kr 3번 Easy Unpack
 subtitle: Easy Unpack 문제 풀이
-categories: pwnable.kr
+categories: reversing.kr
 tags: [Reversing, reversing.kr, Assembly]
 ---
 
