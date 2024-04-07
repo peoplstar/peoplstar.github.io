@@ -52,16 +52,18 @@
       var now = new Date();
       var toggleAt = new Date();
       var hours = now.getHours();
-      var nightShift = hours >= 24;
-
-      if (nightShift) {
-        if (hours > 7) {
-          toggleAt.setDate(toggleAt.getDate() + 1);
-        }
-        toggleAt.setHours(7);
-      } else {
-        toggleAt.setHours(19);
-      }
+      var nightShift = hours >= 19 || hours <=7; 
+      
+      // Always Ligthmode
+      toggleAt.setHours(7); 
+      // if (nightShift) {
+      //   if (hours > 7) {
+      //     toggleAt.setDate(toggleAt.getDate() + 1);
+      //   }
+      //   toggleAt.setHours(7);
+      // } else {
+      //   toggleAt.setHours(19);
+      // }
 
       toggleAt.setMinutes(0);
       toggleAt.setSeconds(0);
