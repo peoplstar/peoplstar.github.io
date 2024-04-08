@@ -52,7 +52,7 @@
       var now = new Date();
       var toggleAt = new Date();
       var hours = now.getHours();
-      var nightShift = hours >= 0;
+      var nightShift = hours >= 19 || hours <=7;
 
       if (nightShift) {
         if (hours > 7) {
@@ -75,7 +75,7 @@
       }, delay);
       console.log(nightShift);
       return {
-        nightShift: false,
+        nightShift: false, // autoTheme > nightShift: false,
         toggleAt: toggleAt.getTime()
       };
     }
