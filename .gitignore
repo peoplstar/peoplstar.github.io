@@ -3,6 +3,8 @@
 .sass-cache
 _site
 Gemfile.lock
+# Portfolio
+.about.md 
 
 # Web Shell로 인한 Window Defender
 _posts/2022-07-17-File-Upload.md
